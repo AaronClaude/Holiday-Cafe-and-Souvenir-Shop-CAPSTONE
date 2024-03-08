@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #212f1f;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.login-form {
+    background-color: rgba(255, 255, 255, 0.8); /* Adjusted background color to make it semi-transparent */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+}
+
+h1, p {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.input-group input {
+    width: calc(100% - 30px); /* Adjusted width to accommodate the icon */
+    padding: 10px 10px 10px 20px; /* Adjusted padding */
+    border: 1px solid #777470;
+    border-radius: 5px;
+}
+
+.remember {
+    margin-bottom: 20px;
+    accent-color: #C97338;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #C97338; /* Coffee brown color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #8d522b; /* Darker shade for hover */
+}
+
+.register-link {
+    text-align: center;
+}
+
+.register-link a {
+    color: #C97338; /* Coffee brown color */
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 200px) {
+    .input-group input {
+        width: 100%;
+    }
+}
