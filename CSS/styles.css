@@ -6,6 +6,7 @@
 
 html {
   scroll-behavior: smooth;
+  
 }
 
 :root {
@@ -18,6 +19,9 @@ html {
   padding: 10px 10px;
 }
 
+body {
+  height: 1000px;
+}
 /* Nav bar design and format*/
 header {
   background: #e1e1e1;
@@ -94,7 +98,7 @@ nav ul li a:hover:after {
   width: 100%;
 }
 
-/* Button design for Sign up option */
+/* Button design for Sign up/Login option */
 .btn-1 {
   text-decoration: none;
   color: #252525;
@@ -117,7 +121,7 @@ nav ul li a:hover:after {
   color: #f2f2f2;
   background-color: #252525;
   border: 2px solid #252525;
-  padding: 10px 20px;
+  padding: 10px 30px;
   border-radius: 25px;
   margin-left: 15px;
   margin-right: -10px;
@@ -133,4 +137,38 @@ nav ul li a:hover:after {
 
 .toggle-menu {
   display: none;
+}
+
+/* Header Styles*/ 
+.heading {
+  position: relative; 
+}
+
+
+.header-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+
+
+/* Responsive styles */
+@media (min-aspect-ratio:16/9) {
+  
+  .header-video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio:16/9) {
+  .header-video {
+    width: auto;
+    height: 100%;
+  }
 }
