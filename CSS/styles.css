@@ -192,3 +192,164 @@ nav ul li a:hover:after {
     height: 100%;
   }
 }
+
+/*ABOUT US */
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+}
+
+.descrip {
+  background-color: black;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.descrip h1 {
+  color: white;
+}
+
+.con1 {
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+/* slideshow*/
+
+.con2 {
+  width: 90vmin;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  left: 25%;
+  border: 20px solid black;
+  border-radius: 8px;
+}
+.wrapper {
+  width: 100%;
+  display: flex;
+  animation: slide 15s infinite;
+}
+
+@keyframes slide {
+  0% {
+      transform: translateX(0);
+  }
+  25% {
+      transform: translateX(0);
+  }
+  30% {
+      transform: translateX(-100%);
+  }
+  50% {
+      transform: translateX(-100%);
+  }
+  55% {
+     transform: translateX(-200%); 
+  }
+  75% {
+      transform: translateX(-200%);
+  }
+  80% {
+      transform: translateX(-300%);
+  }
+  100% {
+      transform: translateX(-300%);
+  }
+}
+/*end of slideshow*/
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about-image {
+  flex: 1;
+  margin-right: 40px;
+  overflow: hidden;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  transition: 0.5s ease;
+}
+
+.about-content {
+  flex: 1;
+}
+
+.about-content h2 {
+  font-size: 23px;
+  margin-bottom: 15px;
+}
+
+.about-content p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.about-content .read {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 19px;
+  text-decoration: none;
+  border-radius: 25px;
+  margin-top: 15px;
+  transition: 0.3s ease;
+  background-color: #e57e05;
+  color: black;
+}
+
+.about-content .read:hover {
+   background-color: whitesmoke;
+}
+
+/*DI PA RESPONSIVE NEED PA IEDIT*/
+@media screen and (max-width: 768px){
+  .head {
+      padding: 0px 20px;
+  }
+  .head h1{
+      font-size: 36px;
+  }
+  .head p {
+      font-size: 17px;
+      margin-bottom: 0px;
+  }
+  .container{
+      padding: 0px;
+  }
+  .about {
+      padding: 20px;
+      flex-direction: column;
+  }
+  .about-image {
+      margin-right: 0px;
+      margin-bottom: 20px;
+  }
+  .about-content p {
+      padding: 0px;
+      font-stretch: 16px;
+  }
+  .about-content .read {
+      font-size: 16px;
+  }
+}
+
+/*end of ABOUT US css */
+
+
