@@ -1,3 +1,4 @@
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -14,7 +15,7 @@ body {
     width: 100%;
     max-width: 400px;
     padding: 20px;
-    box-sizing: border-box;
+    box-sizing: border-box; 
 }
 
 .login-form {
@@ -49,12 +50,12 @@ h1, p {
 button {
     width: 100%;
     padding: 10px;
-    background-color: #C97338; /* Coffee brown color */
+    background-color: #C97338; 
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: 0.3s;
 }
 
 button:hover {
