@@ -6,6 +6,7 @@
 
 html {
   scroll-behavior: smooth;
+  
 }
 
 :root {
@@ -18,9 +19,12 @@ html {
   padding: 10px 10px;
 }
 
+body {
+  height: 1000px;
+}
 /* Nav bar design and format*/
 header {
-  background: #e1e1e1;
+  background: #F4F1EC;
   font-weight: 400;
   font-style: normal;
   color: #252525;
@@ -44,7 +48,7 @@ header .container {
 }
 
 header img {
-  width: 50px; 
+  width: 55px; 
   height: auto;
   margin-left: -50px;
   border-radius: 50%;
@@ -54,7 +58,7 @@ header h1 {
   font-size: 18px;
   font-weight: 500;
   justify-content: left;
-  margin-right: 4rem;
+  margin-right: 3rem;
   padding-top: 5px;
 }
 
@@ -82,7 +86,7 @@ nav ul li a {
 nav ul li a:after {
   content: "";
   position: absolute;
-  background-color: #252525;
+  background-color: #733311;
   height: 3px;
   width: 0;
   left: 0;
@@ -94,11 +98,11 @@ nav ul li a:hover:after {
   width: 100%;
 }
 
-/* Button design for Sign up option */
+/* Button design for Sign up/Login option */
 .btn-1 {
   text-decoration: none;
   color: #252525;
-  border: 2px solid #252525;
+  border: 2px solid #733311;
   padding: 10px 20px;
   border-radius: 25px;
   margin-left: 15px;
@@ -107,17 +111,17 @@ nav ul li a:hover:after {
 
 
 .btn-1:hover {
-  background-color: #252525;
-  color: #f2f2f2;
+  background-color: #733311;
+  color: #F0D0B2;
   transition: 0.5s ease
 }
 
 .btn-2 {
   text-decoration: none;
-  color: #f2f2f2;
-  background-color: #252525;
-  border: 2px solid #252525;
-  padding: 10px 20px;
+  color: #F0D0B2;
+  background-color: #733311;
+  border: 2px solid #733311;
+  padding: 10px 30px;
   border-radius: 25px;
   margin-left: 15px;
   margin-right: -10px;
@@ -125,12 +129,66 @@ nav ul li a:hover:after {
 
 
 .btn-2:hover {
-  border: 2px solid #252525;
-  background-color: #f2f2f2;
+  border: 2px solid #733311;
+  background-color: #F4F1EC;
   color: #252525;
   transition: 0.5s ease
 }
 
 .toggle-menu {
   display: none;
+}
+
+/* Header Styles*/ 
+.heading {
+  position: relative; 
+}
+
+.header-text {
+  color: #F4F1EC;
+  margin-top: 100px;
+}
+.header-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Header Carousel*/
+
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-top: 30%;
+  margin-left: -50px;
+  
+}
+.product-card img {
+  width: 100%;
+  height: auto;
+}
+.product-card .carousel-indicators {
+  display: none;
+}
+
+/* Responsive styles */
+@media (min-aspect-ratio:16/9) {
+  
+  .header-video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio:16/9) {
+  .header-video {
+    width: auto;
+    height: 100%;
+  }
 }
