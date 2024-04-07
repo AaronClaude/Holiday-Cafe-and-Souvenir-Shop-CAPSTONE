@@ -112,6 +112,25 @@ nav ul li a:hover:after {
   transition: 0.5s ease
 }
 
+.btn-2 {
+  text-decoration: none;
+  color: #f2f2f2;
+  background-color: #252525;
+  border: 2px solid #252525;
+  padding: 10px 20px;
+  border-radius: 25px;
+  margin-left: 15px;
+  margin-right: -10px;
+}
+
+
+.btn-2:hover {
+  border: 2px solid #252525;
+  background-color: #f2f2f2;
+  color: #252525;
+  transition: 0.5s ease
+}
+
 .toggle-menu {
   display: none;
 }
