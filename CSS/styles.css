@@ -259,28 +259,28 @@ section p {
 }
 
 #about-us .container h2 {
+  font-family: "Anton", sans-serif;
   font-size: 50px;
   color: #733311;
 }
 
 #about-us .container img {
   height: auto;
-  width: 500px;
-  margin-top: 100px;
-  float: left;
-  
+  width: 550px;
+  margin-top: -500px;
+  margin-left: 700px;
 }
 
 #about-us .container h3 {
   font-size: 35px;
   font-weight: 700;
   text-align: left;
-  margin-top: 120px;
+  margin-top: 110px;
   margin-bottom: 20px;
 }
 
 #about-us .container p {
-  max-width: 1200px;
+  max-width: 650px;
   text-indent: 30px;
   text-align: justify;
   margin-bottom: 10px;
@@ -291,6 +291,35 @@ section p {
   margin-left: 0;
   margin-top: 20px;
 }
+
+/* Services Section */
+#services {
+  background-color: #252525;
+  height: 750px;
+}
+
+#services .container h2 {
+  font-family: "Anton", sans-serif;
+  font-size: 50px;
+  color: #EAA221;
+}
+
+#services .container .row {
+  margin-top: 80px;
+}
+
+.card-body {
+  padding: 30px;
+}
+.card-body p{
+  margin-bottom: 30px;
+}
+
+.card-body a{
+  margin: 0;
+  
+}
+
 
 footer {
   background: #252525;
