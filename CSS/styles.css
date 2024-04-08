@@ -98,7 +98,7 @@ nav ul li a:hover:after {
   width: 100%;
 }
 
-/* Button design for Sign up/Login option */
+/* Button designs for Sign up/Login option */
 .btn-1 {
   text-decoration: none;
   color: #252525;
@@ -135,6 +135,25 @@ nav ul li a:hover:after {
   transition: 0.5s ease
 }
 
+.btn-3 {
+  text-decoration: none;
+  color: #F4F1EC;
+  background-color: transparent;
+  border: 2px solid #F4F1EC;
+  padding: 10px 30px;
+  border-radius: 25px;
+  margin-left: 15px;
+  margin-right: -10px;
+}
+
+
+.btn-3:hover {
+  border: 2px solid #733311;
+  background-color: #733311;
+  color: #F4F1EC;
+  transition: 0.5s ease
+}
+
 .toggle-menu {
   display: none;
 }
@@ -146,7 +165,31 @@ nav ul li a:hover:after {
 
 .header-text {
   color: #F4F1EC;
-  margin-top: 100px;
+  margin-top: -400px;
+  margin-left: 38rem;
+  width: auto;
+  margin-bottom: 150px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+}
+
+.header-text h1 {
+  margin-bottom: 20px;
+  font-weight: bold;
+  
+}
+
+.header-text p {
+  margin-bottom: 30px;
+}
+.header-text .btn-3 {
+  
+  margin-right: 15px;
+  margin-left: -5px;
 }
 .header-video {
   position: absolute;
@@ -194,24 +237,13 @@ nav ul li a:hover:after {
 }
 
 /*ABOUT US */
-
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: white;
-}
-
 .descrip {
-  background-color: black;
+  background-color: #252525;
   width: 100%;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 20px;
+  padding: 35px;
 }
 
 .descrip h1 {
@@ -293,25 +325,20 @@ body {
 }
 
 .about-content h2 {
-  font-size: 23px;
-  margin-bottom: 15px;
+  font-size: 32px;
+  margin-bottom: 20px;
 }
 
 .about-content p {
   font-size: 18px;
   line-height: 1.5;
+  text-align: justify;
+  width: 600px;
+  margin-bottom: 35px;
 }
 
-.about-content .read {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 19px;
-  text-decoration: none;
-  border-radius: 25px;
-  margin-top: 15px;
-  transition: 0.3s ease;
-  background-color: #e57e05;
-  color: black;
+.about-content .btn-2 {
+  margin-left: -5px;
 }
 
 .about-content .read:hover {
@@ -353,3 +380,13 @@ body {
 /*end of ABOUT US css */
 
 
+footer {
+  background: #252525;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer p {
+  font-size: 14px;
+}
