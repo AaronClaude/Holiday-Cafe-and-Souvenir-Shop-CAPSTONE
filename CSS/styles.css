@@ -219,6 +219,7 @@ section p {
     border-radius: 50%;
     margin-left: 215px;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+    border: #F4F1EC solid 5px;
     transition: transform 0.3s ease;
 }
 
