@@ -6,7 +6,7 @@
 
 html {
   scroll-behavior: smooth;
-  
+  overflow-x: hidden;
 }
 
 :root {
@@ -25,11 +25,11 @@ body {
 
 /* Nav bar design and format*/
 header {
-  background: #F4F1EC;
+  background: #FFEDD2;
   font-weight: 400;
   font-style: normal;
   color: #252525;
-  border-bottom: 2px solid #ccc;
+  border-bottom: 1px solid #733311;
   display: flex;
   align-items: center;
   padding: 2.5px;
@@ -66,7 +66,7 @@ header h1 {
   font-size: 18px;
   font-weight: 500;
   justify-content: left;
-  margin-right: 3rem;
+  margin-right: 5rem;
   padding-top: 5px;
 }
 
@@ -113,32 +113,32 @@ nav ul li a:hover:after {
   border: 2px solid #733311;
   padding: 10px 20px;
   border-radius: 25px;
-  margin-left: 15px;
-  margin-right: -10px;
+  margin-left: 5px;
+  margin-right: -25px;
 }
 
 
 .btn-1:hover {
   background-color: #733311;
-  color: #F0D0B2;
+  color: #FFEDD2;
   transition: 0.5s ease
 }
 
 .btn-2 {
   text-decoration: none;
-  color: #F0D0B2;
+  color: #FFEDD2;
   background-color: #733311;
   border: 2px solid #733311;
   padding: 10px 30px;
   border-radius: 25px;
   margin-left: 15px;
-  margin-right: -10px;
+  margin-right: -45px;
 }
 
 
 .btn-2:hover {
   border: 2px solid #733311;
-  background-color: #F4F1EC;
+  background-color: transparent;
   color: #733311;
   transition: 0.5s ease
 }
@@ -161,6 +161,27 @@ nav ul li a:hover:after {
   background-color: transparent;
   filter: blur(0.5px);
   color: #F4F1EC;
+  transition: 0.5s ease
+}
+
+.btn-4 {
+  text-decoration: none;
+  color: #FFEDD2;
+  background-color: transparent;
+  border: 2px solid #FFEDD2;
+  filter: blur(0.5px);
+  padding: 10px 30px;
+  border-radius: 25px;
+  margin-left: 15px;
+  margin-right: -10px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+}
+
+
+.btn-4:hover {
+  border: 2px solid #733311;
+  background-color: #733311;
+  color: #FFEDD2;
   transition: 0.5s ease
 }
 
@@ -219,7 +240,7 @@ section p {
     border-radius: 50%;
     margin-left: 215px;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
-    border: #F4F1EC solid 5px;
+    border: #FFEDD2 solid 5px;
     transition: transform 0.3s ease;
 }
 
@@ -230,8 +251,9 @@ section p {
 #home h2 {
   font-size: 50px;
   font-family: "Bebas Neue", sans-serif;
-  color: #EAA221;
+  color: #F1A500;
   font-weight: 700;
+  text-shadow: 1px 4px #733311;
   margin-bottom: 10px;   
   
 }
@@ -252,7 +274,7 @@ section p {
 /* About us Section */
 #about-us {
   height: 850px;
-  background-color: #F4F1EC;
+  background-color: #FFEDD2;
 }
 
 #about-us .container{
@@ -260,8 +282,8 @@ section p {
 }
 
 #about-us .container h2 {
-  font-family: "Anton", sans-serif;
-  font-size: 50px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 65px;
   color: #733311;
 }
 
@@ -295,14 +317,14 @@ section p {
 
 /* Services Section */
 #services {
-  background-color: #252525;
+  background-color: #0e1111;
   height: 750px;
 }
 
 #services .container h2 {
-  font-family: "Anton", sans-serif;
-  font-size: 50px;
-  color: #EAA221;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 65px;
+  color: #F1A500;
 }
 
 #services .container .row {
@@ -311,6 +333,7 @@ section p {
 
 .card-body {
   padding: 30px;
+  background-color: #FFEDD2;
 }
 .card-body p{
   margin-bottom: 30px;
@@ -319,6 +342,48 @@ section p {
 .card-body a{
   margin: 0;
 }
+
+/* Discount Section */
+#discount-products {
+  background-image: url('../img/1.jpg'); 
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0;
+  color: #f2f2f2;
+  text-align: center;
+  position: relative;
+  
+}
+
+#discount-products::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); 
+}
+
+#discount-products .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative; 
+  z-index: 1; 
+}
+
+.discount-tagline {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 55px;
+  color: #FFEDD2;
+  margin-bottom: 30px;
+}
+
+#discount-percent {
+  color: #F1A500;
+}
+
+
 
 
 footer {
