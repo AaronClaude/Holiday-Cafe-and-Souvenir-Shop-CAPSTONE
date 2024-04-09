@@ -54,7 +54,7 @@ header img {
   margin-left: -50px;
   border-radius: 50%;
   float: left;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
 }
 
@@ -197,7 +197,7 @@ section {
 
 section h2 {
   font-size: 30px;
-  margin-top: 20px;
+  margin-top: 30px;
   margin-bottom: 10px;
   font-weight: 700;
 }
@@ -298,7 +298,7 @@ section p {
   font-size: 35px;
   font-weight: 700;
   text-align: left;
-  margin-top: 110px;
+  margin-top: 100px;
   margin-bottom: 20px;
 }
 
@@ -318,7 +318,7 @@ section p {
 /* Services Section */
 #services {
   background-color: #0e1111;
-  height: 750px;
+  height: 800px;
 }
 
 #services .container h2 {
@@ -383,9 +383,46 @@ section p {
   color: #F1A500;
 }
 
+/* Featured Products (Carousel) Section */
+.carousel {
+  width: 100%;
+}
+.carousel-inner {
+  width: 100%;
+}
+.carousel-item img {
+  width: 100%;
+  height: auto;
+}
 
+.carousel-control-prev, .carousel-control-next {
+  top: 50%;
+  transform: translateY(-50%);
+}
 
+/* Our Products Section */
+#products {
+  height: 800px;
+  background-color: #FFEDD2;
+}
 
+#products .container h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 65px;
+  color: #733311;
+  margin-bottom: 15px;
+}
+
+#products .container p {
+  max-width: 650px;
+  font-size: 18px;
+  margin-left: 225px;
+}
+
+#products .container a {
+  color: #733311;
+  font-weight: 500;
+}
 footer {
   background: #252525;
   color: #f2f2f2;
