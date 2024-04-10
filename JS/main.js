@@ -23,7 +23,7 @@ toggleMenu.addEventListener('click', function() {
 
 // Activate carousel auto-sliding
 document.addEventListener('DOMContentLoaded', function () {
-    var myCarousel = document.getElementById('fullWidthCarousel');
+    var myCarousel = document.getElementById('productCarousel');
     var carousel = new bootstrap.Carousel(myCarousel, {
       interval: 2000, // 3.5 seconds
       wrap: true

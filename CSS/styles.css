@@ -343,6 +343,74 @@ section p {
   margin: 0;
 }
 
+
+/* Featured Products (Carousel) Section */
+#featured-products {
+  background-color: #F4F1EC;
+}
+
+#featured-products .container h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 65px;
+  color: #733311;
+  margin-bottom: 15px;
+}
+
+#featured-products .container p {
+  max-width: 800px;
+  font-size: 18px;
+  margin-left: 150px;
+  margin-bottom: 30px;
+}
+
+#featured-products .container .btn-2 {
+  margin: 0;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+}
+
+#productCarousel {
+  max-height: 500px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  margin-bottom: 40px;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  
+}
+
+.carousel-control-prev, .carousel-control-next {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Our Products Section */
+#products {
+  height: 800px;
+  background-color: #FFEDD2;
+}
+
+#products .container h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 65px;
+  color: #733311;
+  margin-bottom: 15px;
+}
+
+#products .container p {
+  max-width: 650px;
+  font-size: 18px;
+  margin-left: 225px;
+}
+
+#products .container a {
+  color: #733311;
+  font-weight: 500;
+}
+
 /* Discount Section */
 #discount-products {
   background-image: url('../img/1.jpg'); 
@@ -383,46 +451,6 @@ section p {
   color: #F1A500;
 }
 
-/* Featured Products (Carousel) Section */
-.carousel {
-  width: 100%;
-}
-.carousel-inner {
-  width: 100%;
-}
-.carousel-item img {
-  width: 100%;
-  height: auto;
-}
-
-.carousel-control-prev, .carousel-control-next {
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-/* Our Products Section */
-#products {
-  height: 800px;
-  background-color: #FFEDD2;
-}
-
-#products .container h2 {
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 65px;
-  color: #733311;
-  margin-bottom: 15px;
-}
-
-#products .container p {
-  max-width: 650px;
-  font-size: 18px;
-  margin-left: 225px;
-}
-
-#products .container a {
-  color: #733311;
-  font-weight: 500;
-}
 footer {
   background: #252525;
   color: #f2f2f2;
