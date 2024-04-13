@@ -232,6 +232,7 @@ section p {
   margin-top: -130px;
   margin-left: 60px;
   position: relative;
+  
 }
 
 #home .container img {
@@ -256,6 +257,7 @@ section p {
   text-shadow: 1px 4px #733311;
   margin-bottom: 10px;   
   
+  
 }
 #home p {
   font-size: 18px;
@@ -275,11 +277,12 @@ section p {
 #about-us {
   height: 850px;
   background-color: #FFEDD2;
+  
 }
 
 #about-us .container{
   text-align: center;
-
+  
 }
 
 #about-us .container h2 {
@@ -339,10 +342,7 @@ section p {
 
 #services .container {
   position: relative;
-
 }
-
-
 
 #services .container h2 {
   font-family: "Bebas Neue", sans-serif;
@@ -358,22 +358,15 @@ section p {
   position: relative;
   overflow: hidden;
   border: #F4F1EC 2px solid;
+  transition: transform 0.3s ease;
 }
 
 .card:hover {
   border: 2px solid #733311;
-  transition: 0.3s ease
-  
-}
-
-.card img {
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.card img:hover {
+  transition: 0.3s ease;
   transform: scale(1.1);
 }
+
 .card-body {
   padding: 30px;
   background-color: #FFEDD2;
@@ -438,26 +431,46 @@ section p {
 
 /* Our Products Section */
 #products {
-  height: 800px;
+  height: 2800px;
   background-color: #FFEDD2;
 }
-
 #products .container h2 {
   font-family: "Bebas Neue", sans-serif;
   font-size: 65px;
   color: #733311;
-  margin-bottom: 15px;
 }
 
 #products .container p {
   max-width: 650px;
   font-size: 18px;
   margin-left: 225px;
+  margin-bottom: -20px;
 }
 
 #products .container a {
   color: #733311;
   font-weight: 500;
+}
+
+.product-header {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 45px;
+  color: #733311;
+  margin-top: 35px;
+  margin-bottom: 15px;
+}
+
+#product-card {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 55px;
+  border: #733311 2px solid;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+}
+
+#view-more {
+  padding: 12px 40px;
+  margin-right: 20px;
 }
 
 /* Discount Section */
@@ -500,6 +513,9 @@ section p {
   color: #F1A500;
 }
 
+
+
+
 footer {
   background: #252525;
   color: #f2f2f2;
@@ -512,13 +528,3 @@ footer p {
 }
 
 
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(50px); /* Initial position below the viewport */
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0); /* Move element to its original position */
-  }
-}
