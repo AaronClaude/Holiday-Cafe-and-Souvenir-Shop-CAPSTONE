@@ -173,7 +173,7 @@ nav ul li a:hover:after {
   padding: 10px 30px;
   border-radius: 25px;
   margin-left: 15px;
-  margin-right: -10px;
+  margin-right: 15px;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
 }
 
@@ -389,6 +389,7 @@ section p {
 /* Featured Products (Carousel) Section */
 #featured-products {
   background-color: #F4F1EC;
+  height: 850px;
 }
 
 #featured-products .container h2 {
