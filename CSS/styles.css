@@ -432,7 +432,7 @@ section p {
 
 /* Our Products Section */
 #products {
-  height: 2800px;
+  height: 2900px;
   background-color: #FFEDD2;
 }
 #products .container h2 {
@@ -440,6 +440,7 @@ section p {
   font-size: 65px;
   color: #733311;
 }
+
 
 #products .container p {
   max-width: 650px;
