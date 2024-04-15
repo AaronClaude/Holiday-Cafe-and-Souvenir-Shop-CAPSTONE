@@ -2,8 +2,7 @@
 include 'DBconn.php';
 session_start();
 
-if (isset ($_SESSION ['id'] ) && isset ($_SESSION ['uname'])){
-
+if (isset ($_SESSION ['id'] ) && isset ($_SESSION ['empid'])){
 
 
 
@@ -19,7 +18,7 @@ if (isset ($_SESSION ['id'] ) && isset ($_SESSION ['uname'])){
 </head>
 <body>
 
-    <h1>WELCOME PUTANGINA MO!</h1>
+    <h1>WELCOME  admin PUTANGINA MO!</h1>
     <a href="Logout.php">Log out</a>
 </body>
 </html>
@@ -27,7 +26,7 @@ if (isset ($_SESSION ['id'] ) && isset ($_SESSION ['uname'])){
 
 <?php
 }else{
-    header("Location:userlogin.php");
+    header(Location:"adminlogin.php");
     exit();
 }
 ?>
