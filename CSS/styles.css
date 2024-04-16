@@ -576,12 +576,12 @@ section p {
 }
 
 /* Contact Us Section */
-#contact {
+#contacts {
   background-color: #FFEDD2;
   height: 1000px;
 }
 
-#contact .container {
+#contacts .container {
   max-width: 1000px;
   margin: 50px auto;
   padding: 20px;
@@ -591,7 +591,7 @@ section p {
   display: flex;
 }
 
-#contact .container .image {
+#contacts .container .image {
   flex: 1;
   background-image: url('../IMG/contact.jpg');
   background-size: cover;
@@ -600,32 +600,32 @@ section p {
   border-radius: 15px 50px;
 }
 
-#contact .container .form {
+#contacts .container .form {
   flex: 1;
   padding: 40px;
   display: flex;
   flex-direction: column;
 }
 
-#contact .container h2 {
+#contacts .container h2 {
   text-align: center;
   font-weight: 700;
   color: #733311;
   
 }
 
-#contact .container form {
+#contacts .container form {
   display: flex;
   flex-direction: column;
 }
 
-#contact .container label {
+#contacts .container label {
   text-align: left;
   margin-bottom: 5px;
   color: #733311;
 }
 
-#contact .container input[type="text"],
+#contacts .container input[type="text"],
  input[type="email"],
  textarea {
   padding: 10px;
@@ -634,20 +634,20 @@ section p {
   border-radius: 25px;
 }
 
-#contact .container input:hover {
+#contacts .container input:hover {
   border: 2px solid #733311;
   transition: 0.3s ease;
 }
-#contact .container textarea {
+#contacts .container textarea {
   height: 100px;
 }
 
-#contact .container textarea:hover {
+#contacts .container textarea:hover {
   border: 2px solid #733311;
   transition: 0.3s ease;
 }
 
-#contact .container button {
+#contacts .container button {
   padding: 10px 20px;
   text-decoration: none;
   color: #FFEDD2;
@@ -657,7 +657,7 @@ section p {
   border-radius: 25px;
 }
 
-#contact .container button:hover {
+#contacts .container button:hover {
   border: 2px solid #733311;
   background-color: transparent;
   color: #733311;
