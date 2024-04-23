@@ -414,13 +414,10 @@ section p {
   position: relative;
   overflow: hidden;
   border: #F4F1EC 2px solid;
-  transition: transform 0.3s ease;
 }
 
 .card:hover {
   border: 2px solid #733311;
-  transition: 0.3s ease;
-  transform: scale(1.1);
 }
 
 .card-body {
@@ -462,7 +459,7 @@ section p {
   margin-bottom: 30px;
 }
 
-#featured-products .container .btn-2 {
+#featured-products .container .btn-1 {
   margin: 0;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
 }
@@ -663,13 +660,27 @@ section p {
 
 footer {
   background: #733311;
-  color: #F4F1EC;
-  text-align: center;
+  color: #FFEDD2;
   padding: 20px 0;
 }
 
+footer i{
+  color: #FFEDD2;
+  padding: 5px;
+  transition: transform 0.2s ease;
+}
+
+footer i:hover {
+  transform: scale(1.1);
+} 
 footer p {
   font-size: 14px;
+  text-align: center;
+  margin-left: 30px;
+}
+
+.footer-icons {
+  text-align: center;
 }
 
 
