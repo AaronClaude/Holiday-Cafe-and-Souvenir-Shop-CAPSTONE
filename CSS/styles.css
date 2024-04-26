@@ -66,16 +66,28 @@ header h1 {
   font-size: 18px;
   font-weight: 500;
   justify-content: left;
-  margin-right: 5rem;
+  margin-right: 11rem;
   padding-top: 5px;
 }
 
+nav #click, #menu-icon {
+  color: #733311;
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+}
+
+
 nav ul {
   padding-top: 15.5px;
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  margin-right: 10px;
 }
 nav ul li {
   display: inline;
-  margin-right: 15px;
+  padding-top: 12px;
 }
 
 nav ul li:last-child {
@@ -99,7 +111,7 @@ nav ul li a:after {
   width: 0;
   left: 0;
   bottom: -10px;
-  transition: 0.5s ease
+  transition: 0.3s ease
 }
 
 nav ul li a:hover:after {
@@ -116,6 +128,7 @@ nav ul li a:hover:after {
   padding: 10px 20px;
   border-radius: 25px;
   margin-right: -25px;
+  margin-bottom: 20px;
 }
 
 
@@ -684,3 +697,125 @@ footer p {
 }
 
 
+@media screen and (max-width: 1024px) {
+  nav #menu-icon {
+    display: block;
+    
+  }
+  
+ #nav-title {
+    display: none;
+  }
+ 
+  nav ul {
+    position: fixed;
+    top: 65px;
+    left: -120%;
+    background-color: #FFEDD2;
+    height: 100vh;
+    width: 100%;
+    display: block;
+    text-align: center;
+    opacity: 90%;
+    transition: all 0.3s ease-in;
+    z-index: 1;
+  }
+
+  #click {
+    display: none;
+  }
+
+  #click:checked ~ ul {
+    left: 0%;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 25px 0;
+  }
+
+  nav ul li a {
+    top: 20px;
+    font-size: 18px;
+  }
+  header img {
+    margin-left: -5px;
+  }
+
+  .dropdown {
+    margin-right: 20px;
+    margin-top: 20px;
+  }
+
+  .container {
+    width:90%;
+  }
+
+  /* Home Section */
+
+  #home .container img {
+    margin-left: 20px;
+  }
+
+  #home h2 {
+    text-align: center;
+    margin-left: -60px;
+    margin-right: 30px;
+
+  }
+
+  #home p{
+    width: 290px;
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  #home .container a {
+    padding: 10px 30px;
+    text-align: center;
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  /* About Us Section */
+  #about-us .container h2 {
+    font-size: 55px;
+  }
+
+  #about-us .container h3 {
+    margin-top: 80px;
+    font-size: 25px;
+  }
+
+  #about-us .container p {
+    max-width: 500px;
+  }
+
+  /* Services Section */
+  #services {
+    height: 1100px;
+  }
+
+  #services .container h2 {
+    font-size: 55px;
+  }
+
+  #services .container {
+    padding: 0 15px; 
+  }
+  #services .col-md-6 {
+    width: 50%;
+    padding-top: 40px;
+  }
+
+  #services .container .card-body h5 {
+    font-size: 17px;
+    margin-bottom: 30px;
+  }
+  #services .container .card-body p {
+    display: none;
+  }
+}

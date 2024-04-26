@@ -43,23 +43,32 @@
                 <a href="#home"><img src="img/logos/nav-logo.png"></a>
                 <h1 id="nav-title">Holiday Cafe & Souvenir Shop</h1>
                 <nav>
+
+                  <input type="checkbox" id="click">
+                  <label for="click" class="menu-mobile-btn">
+                    <i class="bi bi-list" id="menu-icon"></i>
+                  </label>
+
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about-us">About Us</a></li>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#featured-products">Products</a></li>
                         <li><a href="#contacts">Contacts</a></li>
+                        
+                          <div class="dropdown">
+                          <button class="dropbtn"><i class="bi bi-person-circle"></i> Account</button>
+                          <div class="dropdown-content">
+                            <a href="PHP/userlogin.php">User</a>
+                            <a href="PHP/adminlogin.php">Admin</a>
+                            <a href="PHP/cashierlogin.php">Cashier</a>
+                          </div>
+                        </div>
+                      
                     </ul>
                 </nav>
 
-                <div class="dropdown">
-                  <button class="dropbtn"><i class="bi bi-person-circle"></i> Account</button>
-                  <div class="dropdown-content">
-                    <a href="PHP/userlogin.php">User</a>
-                    <a href="PHP/adminlogin.php">Admin</a>
-                    <a href="PHP/cashierlogin.php">Cashier</a>
-                  </div>
-                </div>
+                
 
             </div>
         </header>
