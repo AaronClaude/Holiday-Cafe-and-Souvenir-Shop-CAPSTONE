@@ -51,6 +51,7 @@ if(isset($_POST['submit'])&& isset($_FILES['image'])){
         <input type="text" placeholder="Enter Email" name="email">
         <input type="text" placeholder="Enter Mobile No." name="mobile">
         <input type="password" placeholder="Enter Password" name="password">
+        <input type="file" name="image" id="file">
 
         <button type="submit" class="btn-1" name="submit">SIGN UP</button>
       </form>
@@ -58,7 +59,7 @@ if(isset($_POST['submit'])&& isset($_FILES['image'])){
 
 
     <div class="form-container sign-in">
-      <form action="UserDB.php" method="post">
+      <form action="adminDB.php" method="post">
         <?php if (isset($_GET['error'])) { ?>
           <p class="error"><?php echo $_GET['error']; ?></p>
         <?php } ?>
