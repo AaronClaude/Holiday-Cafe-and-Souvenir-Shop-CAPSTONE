@@ -23,7 +23,7 @@ if (isset ($_SESSION ['empid'] ) && isset ($_SESSION ['password'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../CSS/adminpanel.css">
-    <title>CX HOME</title>
+    <title>ADMIN PANEL</title>
 </head>
 <body>
 

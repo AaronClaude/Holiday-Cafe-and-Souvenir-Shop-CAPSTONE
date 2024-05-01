@@ -3,7 +3,7 @@
 include 'DBconn.php';
 session_start();
 
-if (isset ($_SESSION ['id'] ) && isset ($_SESSION ['empid'])){
+if (isset ($_SESSION ['empid'] ) && isset ($_SESSION ['password'])){
 
 
 
@@ -27,7 +27,7 @@ if (isset ($_SESSION ['id'] ) && isset ($_SESSION ['empid'])){
 
 <?php
 }else{
-    header("Location:cashierlogin.php");
+    header("Location:../index.php");
     exit();
 }
 ?>
