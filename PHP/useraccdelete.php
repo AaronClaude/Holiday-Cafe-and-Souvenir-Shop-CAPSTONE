@@ -1,9 +1,9 @@
 <?php
 include 'DBconn.php';
 if(isset($_GET['deleteid'])){
-    $empid=$_GET['deleteid'];
+    $id=$_GET['deleteid'];
 }
-    $sql="DELETE FROM `cashier` where empid='$empid'";
+    $sql="DELETE FROM `useracc` where id='$id'";
 
     $result=mysqli_query($con,$sql);
 

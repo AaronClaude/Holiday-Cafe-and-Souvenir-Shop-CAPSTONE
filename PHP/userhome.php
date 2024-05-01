@@ -2,7 +2,7 @@
 include 'DBconn.php';
 session_start();
 
-if (isset ($_SESSION ['id'] ) && isset ($_SESSION ['uname'])){
+if (isset ($_SESSION ['uname'] ) && isset ($_SESSION ['password'])){
 
 
 
@@ -27,7 +27,7 @@ if (isset ($_SESSION ['id'] ) && isset ($_SESSION ['uname'])){
 
 <?php
 }else{
-    header("Location:userlogin.php");
+    header("Location:../index.php");
     exit();
 }
 ?>

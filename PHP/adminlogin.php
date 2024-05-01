@@ -1,17 +1,18 @@
 <?php
 
 include 'DBconn.php';
-if(isset($_POST['submit'])){
+if(isset($_POST['submit'])&& isset($_FILES['image'])){
   $empid=$_POST['empid'];
   $email=$_POST['email'];
   $mobile=$_POST['mobile'];
   $password=$_POST['password'];
+  $image= $_FILES['image']['name'];
+  $tmp_name= $_FILES['image']['tmp_name'];
+  $folder = 'profileimg/'.$image;
   
-  $sql="INSERT INTO `admin` (empid,email,mobile,password) values ('$empid','$email','$mobile','$password') ";
-  $result = mysqli_query($con, $sql);
-  if($result){
+  $sql= mysqli_query($con,"INSERT INTO `admin`(empid,email,mobile,password,image) values ('$empid','$email','$mobile','$password','$image')");
+  if(move_uploaded_file($tmp_name,$folder)){
     echo "<h2>Successfully Registered</h2>";
-
   }else{
     die(mysqli_error($con));
   }
@@ -19,7 +20,6 @@ if(isset($_POST['submit'])){
 }
 
 ?>
-
 
 
 

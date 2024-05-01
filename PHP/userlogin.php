@@ -5,16 +5,22 @@ if (isset($_POST['submit'])) {
   $email = $_POST['email'];
   $mobile = $_POST['mobile'];
   $password = $_POST['password'];
+  $image= $_FILES['image']['name'];
+  $tmp_name= $_FILES['image']['tmp_name'];
+  $folder = 'profileimg/'.$image;
 
-  if ($result) {
-    $sql = "INSERT INTO `useracc` (uname,email,mobile,password) values ('$uname','$email','$mobile','$password') ";
+
+    $sql = "INSERT INTO `useracc` (uname,email,mobile,password,image) values ('$uname','$email','$mobile','$password','$image') ";
     $result = mysqli_query($con, $sql);
-    echo "<script> alert ('Register Successful'); </script>";
-  } else {
-    die(mysqli_error($con));
+    if(move_uploaded_file($tmp_name,$folder)){
+      echo "<h2>Successfully Registered</h2>";
+    }else{
+      die(mysqli_error($con));
+    }
+  
   }
-}
-
+  
+ 
 ?>
 
 
@@ -51,6 +57,7 @@ if (isset($_POST['submit'])) {
         <input type="text" placeholder="Enter Email" name="email">
         <input type="text" placeholder="Enter Mobile No." name="mobile">
         <input type="password" placeholder="Enter Password" name="password">
+        <input type="file" name="image" id="file">
 
         <button type="submit" class="btn-1" name="submit">SIGN UP</button>
       </form>
