@@ -45,7 +45,7 @@ if(isset($_POST['submit'])&& isset($_FILES['image'])){
 <body>
   <div class="acc-container" id="container">
     <div class="form-container sign-up">
-      <form method="post">
+      <form method="post" action="" enctype="multipart/form-data">
         <h1>REGISTER</h1>
         <input type="text" placeholder="Enter Employee No." name="empid">
         <input type="text" placeholder="Enter Email" name="email">

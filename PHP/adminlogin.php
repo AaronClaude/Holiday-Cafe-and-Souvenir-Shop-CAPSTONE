@@ -2,12 +2,12 @@
 
 include 'DBconn.php';
 if(isset($_POST['submit'])&& isset($_FILES['image'])){
-  $empid=$_POST['empid'];
-  $email=$_POST['email'];
-  $mobile=$_POST['mobile'];
-  $password=$_POST['password'];
-  $image= $_FILES['image']['name'];
-  $tmp_name= $_FILES['image']['tmp_name'];
+  $empid = $_POST['empid'];
+  $email = $_POST['email'];
+  $mobile = $_POST['mobile'];
+  $password =$_POST['password'];
+  $image = $_FILES['image']['name'];
+  $tmp_name = $_FILES['image']['tmp_name'];
   $folder = 'profileimg/'.$image;
   
   $sql= mysqli_query($con,"INSERT INTO `admin`(empid,email,mobile,password,image) values ('$empid','$email','$mobile','$password','$image')");
@@ -45,7 +45,7 @@ if(isset($_POST['submit'])&& isset($_FILES['image'])){
 <body>
   <div class="acc-container" id="container">
     <div class="form-container sign-up">
-      <form method="post">
+      <form method="post" action="" enctype="multipart/form-data">
         <h1>REGISTER</h1>
         <input type="text" placeholder="Enter Employee No." name="empid">
         <input type="text" placeholder="Enter Email" name="email">
@@ -59,7 +59,7 @@ if(isset($_POST['submit'])&& isset($_FILES['image'])){
 
 
     <div class="form-container sign-in">
-      <form action="adminDB.php" method="post">
+      <form action="adminDB.php" method="post" >
         <?php if (isset($_GET['error'])) { ?>
           <p class="error"><?php echo $_GET['error']; ?></p>
         <?php } ?>

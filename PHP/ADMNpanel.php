@@ -46,7 +46,7 @@ if (isset ($_SESSION ['empid'] ) && isset ($_SESSION ['password'])){
                 <h2>Hello Admin</h2>
                 <h3><?php echo $fetch['empid']; ?></h3>
                 <a href="admnprofile_update.php" class="btn">update profile</a>
-                <a href="adminlogin.php" class="delete-btn">logout</a>
+                <a href="../index.php" class="delete-btn">logout</a>
                 <p>new <a href="login.php">login</a> or <a href="register.php">register</a></p>
 
         <div class="update-profile">
@@ -157,7 +157,7 @@ if (isset ($_SESSION ['empid'] ) && isset ($_SESSION ['password'])){
 
 <?php
 }else{
-    header("Location:adminlogin.php");
+    header("Location:../index.php");
     exit();
 }
 ?>

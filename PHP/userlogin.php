@@ -50,7 +50,7 @@ if (isset($_POST['submit'])) {
 <body>
   <div class="acc-container" id="container">
     <div class="form-container sign-up">
-      <form method="post">
+      <form method="post" action="" enctype="multipart/form-data">
 
         <h1>REGISTER</h1>
         <input type="text" placeholder="Enter Username" name="uname">
