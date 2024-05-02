@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    width: 1440px;
+    height: 1024px;
+    position: fixed;
+    background-color: #F4F1EC;
+  }
+
+  .container {
+    width: 100%;
+    top: 0;
+    padding: 10px 10px;
+  }
+
+header {
+    background: #FFEDD2;
+    font-weight: 400;
+    font-style: normal;
+    color: #252525;
+    border-bottom: 2px solid #733311;
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 75px;
+    top: 0;
+}
+
+header img {
+    width: 55px; 
+    height: auto;
+    border-radius: 50%;
+    margin-left: 25px;
+    float: left;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+header img:hover {
+    transform: scale(1.1);
+  }
+
+header h1 {
+    font-size: 18px;
+    font-weight: 500;
+    justify-content: left;
+    padding-top: 15px;
+    margin-left: 6rem;
+}
+
+.sidebox-1 {
+    position: relative;
+    width: 350px;
+    height: 325px;
+    top: 100px;
+    left: 25px;
+    border-radius: 15px;
+    border: 2px #733311 solid;
+    background-color: #FFEDD2;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+}
+
+
+.sidebox-1 .container {
+    text-align: center;
+    color: #733311;
+    margin-top: 25px;
+}
+
+.sidebox-1 .container img {
+    width: 90px; 
+    height: auto;
+    border-radius: 50%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.sidebox-1 .container h3 {
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.sidebox-1 .container a {
+    color: #733311;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.sidebox-1 .container a:hover {
+    text-decoration: underline;
+}
+
+.sidebox-2 {
+    position: relative;
+    width: 350px;
+    height: 125px;
+    top: 120px;
+    left: 25px;
+    border-radius: 15px;
+    border: 2px #733311 solid;
+    background-color: #FFEDD2;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+}
+
+.sidebox-2 .container {
+    display: block;
+    color: #733311;
+    margin-top: 15px;
+}
+
+.sidebox-2 .container a {
+    color: #733311;
+    font-weight: 700;
+    font-size: 18px;
+    margin-left: 15px;
+}
+
+.sidebox-2 .container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebox-2 ul li {
+    padding: 5px 15px;
+}
+  
+.sidebox-2 ul li a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    transition: 0.3s ease;
+}
+  
+.sidebox-2 ul li a:hover {
+    color: #252525;
+}
+
+.register-btn {
+    position: relative;
+    top: 140px;
+    left: 25px;
+    text-decoration: none;
+    color: #733311;
+    border: 2px solid #733311;
+    padding: 10px 75px;
+    border-radius: 25px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+}
+
+.register-btn:hover {
+    background-color: #733311;
+    color: #FFEDD2;
+    transition: 0.5s ease
+}
+
+.logout-btn {
+    position: relative;
+    top: 180px;
+    left: 25px;
+    text-decoration: none;
+    color: #FFEDD2;
+    background-color: #733311;
+    border: 2px solid #733311;
+    padding: 10px 132px;
+    border-radius: 25px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+}
+
+.logout-btn:hover {
+    border: 2px solid #733311;
+    background-color: transparent;
+    color: #733311;
+    transition: 0.5s ease;
+}
+
+.dashboard {
+    position: relative;
+    margin-top: -420px;
+    width: 1010px;
+    height: 600px;
+    left: 400px;
+    border-radius: 15px;
+    border: 2px #733311 solid;
+    background-color: #FFEDD2;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+}

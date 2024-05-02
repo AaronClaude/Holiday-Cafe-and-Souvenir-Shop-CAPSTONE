@@ -818,4 +818,8 @@ footer p {
   #services .container .card-body p {
     display: none;
   }
+
+  #services .container .card-body .btn-1 {
+    padding: 7px;
+  }
 }

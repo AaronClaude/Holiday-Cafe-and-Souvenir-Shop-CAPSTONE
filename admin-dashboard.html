@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+     <!-- Box Icons -->
+     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="CSS/admin-dashboard.css">
+    <title>POS - DASHBOARD</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="IMG/logos/nav-logo.png">
+            <h1>Holiday Cafe & Souvenir Shop</h1>
+        </div>
+    </header>
+
+    <section class="sidebox-1">
+        <div class="container">
+            <h2>ADMIN PROFILE</h2>
+            <img src="IMG/logos/nav-logo.png" alt="profile icon">
+            <h3>Hello Admin!</h3>
+            <h3>Employee No. <?php echo $fetch['empid']; ?></h3>
+            <br>
+            <a href="#">See more</a>
+        </div>
+    </section>
+
+    <section class="sidebox-2">
+        <div class="container">
+            <ul>
+                <li><a href="#" class="active">DASHBOARD</a></li>
+                <li><a href="#">ABOUT</a></li>
+              </ul>
+        </div>
+    </section>
+
+        <section class="buttons">
+            <div class="container">
+                <a href="#" class="register-btn">CREATE NEW ACCOUNT</a>
+                <br>
+                <a href="#" class="logout-btn">LOGOUT</a>
+            </div>
+        </section>
+    
+
+    <section class="dashboard">
+        <div class="container">
+            
+        </div>
+    </section>
+</body>
+</html>
