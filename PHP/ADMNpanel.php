@@ -22,7 +22,7 @@ if (isset ($_SESSION ['empid'] ) && isset ($_SESSION ['password'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../CSS/adminpanel.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/Adminpanel.css">
     <title>ADMIN PANEL</title>
 </head>
 <body>
@@ -50,21 +50,30 @@ if (isset ($_SESSION ['empid'] ) && isset ($_SESSION ['password'])){
                 <p>new <a href="login.php">login</a> or <a href="register.php">register</a></p>
 
         <div class="update-profile">
-            <form action="" method="post" enctype="multipart/form-data">
-                            <span>username :</span>
-                            <input type="text" name="update_empid" value="<?php echo $fetch['empid']; ?>" ><br></br>
-                            <span>your email :</span>
-                            <input type="email" name="update_email" value="<?php echo $fetch['email']; ?>" ><br></br>
-                            <span>update your pic :</span>
-                            <input type="file" name="update_image" accept="image/jpg, image/jpeg, image/png" ><br></br>
-                            <input type="hidden" name="old_password" value="<?php echo $fetch['password']; ?>"><br></br>
-                            <span>old password :</span>
-                            <input type="password" name="update_password" placeholder="enter previous password" ><br></br>
-                            <span>new password :</span>
-                            <input type="password" name="new_password" placeholder="enter new password" ><br></br>
-                            <span>confirm password :</span>
-                            <input type="password" name="confirm_password" placeholder="confirm new password" ><br></br>
-            </form>
+            
+                            <table>
+                                <th colspan="2">Admin Information</th>
+                                <tr>
+                                    <td>Email</td>
+                                    <td><?php echo $fetch['email']; ?></td>
+                                </tr>
+                                <tr>
+                                    <td>Contact No.</td>
+                                    <td><?php echo $fetch['mobile']; ?></td>
+                                </tr>
+                                <tr>
+                                    <td>Empid</td>
+                                    <td><?php echo $fetch['empid']; ?></td>
+                                </tr>
+                                <tr>
+                                    <td>Password</td>
+                                    <td>**********</td>
+                                </tr>
+                    
+                            
+                                
+                            </table>
+            
         </div>
     </div>
 

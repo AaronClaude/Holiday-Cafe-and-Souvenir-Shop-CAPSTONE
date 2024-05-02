@@ -6,6 +6,7 @@
 }
 body{
   background-color: blanchedalmond;
+  background-image: url(../IMG/carousel-1.jpg);
 }
 .profile{   
      margin-top: 40px;
@@ -65,8 +66,9 @@ body{
   text-align: center;
   cursor: pointer;
   font-size: 20px;
-  margin-top: 10px;
-  margin-left: 200px;
+  margin-top: 750px;
+  margin-left: 350px;
+  position: absolute;
   
 }
 .delete-btn{
@@ -181,8 +183,8 @@ margin-top: 100px;
 
 .update-profile{
   margin-top: 100px;
-  min-height: 300px;
-  background-color: gray;
+  height: 620px;
+  background-color:white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -190,14 +192,12 @@ margin-top: 100px;
   border-radius: 5px;
 }
 
-.update-profile form{
-  padding-top: 120px;
-  background-color:white;
-  text-align: center;
-  width: 700px;
-  height: 550px;
-  text-align: center;
-  border-radius: 5px;
+.update-profile tr,td{
+  border:none;
+  width: 200px;
+  height: 100px;
+ 
+
 }
 
 input[type=text], input[type=password], input[type=email]{
@@ -209,7 +209,8 @@ input[type=text], input[type=password], input[type=email]{
   margin-top: 40px;
   margin-left: 800px;
    padding:20px;
-   background-color:black;
+   background-color:transparent;
+   backdrop-filter:blur(10px);
    position: absolute;
    text-align: center;
    height: 95%;
@@ -217,7 +218,8 @@ input[type=text], input[type=password], input[type=email]{
    border-radius: 5px;
    z-index: -1;
    border: solid 10px;
-   border-color: #733311;
+   border-color: rgba(255, 255, 255, 0.733);
  
 }
+
 
