@@ -28,7 +28,7 @@
             <h2>ADMIN PROFILE</h2>
             <img src="../IMG/logos/nav-logo.png" alt="profile icon">
             <h3>Employee No. <?php echo $fetch['empid']; ?></h3>
-            <a href="#">See more</a>
+            <a href="#" id="open-admin">See more</a>
         </div>
     </section>
 
@@ -54,6 +54,41 @@
         <div class="container">
             
         </div>
+ 
+        <div class="admin-profile" id="admin-profile">
+            <div class="container">
+                <span class="close-btn">&times;</span>
+
+                    <div class="admin-profile-container">
+                        <h2>ADMIN PROFILE</h2>
+                        <img src="../IMG/logos/nav-logo.png" alt="profile icon">
+                    </div>
+                    
+                <table>
+                    <th>Admin Information</th>
+                    <tr>
+                        <td>Email:</td>
+                        <td><?php echo $fetch['email']; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Contact No.</td>
+                        <td><?php echo $fetch['mobile']; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Employee ID:</td>
+                        <td><?php echo $fetch['empid']; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td>**********</td>
+                    </tr>
+        
+                </table>
+
+                <a href="#" class="update-btn">UPDATE PROFILE</a>
+            </div>
+        </div>
     </section>
 </body>
+<script src="admin-dashboard.js"></script>
 </html>

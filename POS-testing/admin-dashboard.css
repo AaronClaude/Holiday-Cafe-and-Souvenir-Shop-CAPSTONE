@@ -197,6 +197,107 @@ header h1 {
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
 }
 
+.admin-profile {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    animation: modalPopUp 0.3s ease;
+}
+
+.admin-profile .container {
+    margin: 5% auto; 
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px #733311 solid;
+    background-color: #FFEDD2;
+    width: 450px;
+    height: 500px; 
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+}
+
+.admin-profile .container table {
+    color: #733311;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.admin-profile .container table th{
+    text-align: center;
+}
+
+.admin-profile-container {
+    text-align: center;
+    color: #733311;
+    margin-top: 25px;
+}   
+
+.admin-profile-container img {
+    width: 120px; 
+    height: auto;
+    border: #733311 3px solid;
+    border-radius: 50%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.admin-profile-container img:hover {
+    transform: scale(1.1);
+  }
+
+.admin-profile-container h3 {
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+
+.close-btn {
+    color: #733311;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover, .close-btn:focus {
+  color: #471f09;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.update-btn {
+    text-decoration: none;
+    color: #FFEDD2;
+    background-color: #733311;
+    border: 2px solid #733311;
+    padding: 10px 30px;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+}
+
+.update-btn:hover {
+    border: 2px solid #733311;
+    background-color: transparent;
+    color: #733311;
+    transition: 0.5s ease;
+}
+
+@keyframes modalPopUp {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
 @media only screen and (min-width: 1024px) {
     .sidebox-1 {
         position: relative;
@@ -278,4 +379,17 @@ header h1 {
         background-color: #FFEDD2;
         box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
     }
+
+
+    .admin-profile .container {
+        margin: 5% auto; 
+        padding: 30px;
+        border-radius: 15px;
+        border: 2px #733311 solid;
+        background-color: #FFEDD2;
+        width: 450px;
+        height: 500px; 
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+    }
+    
 }
