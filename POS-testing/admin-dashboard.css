@@ -144,7 +144,7 @@ header h1 {
 }
   
 .sidebox-2 ul li a:hover {
-    color: #252525;
+    color: #471f09;
 }
 
 .register-btn {
@@ -222,11 +222,21 @@ header h1 {
 .admin-profile .container table {
     color: #733311;
     padding: 10px;
+    text-align: left;
     margin-bottom: 10px;
 }
 
 .admin-profile .container table th{
+    font-size: 20px;
     text-align: center;
+}
+
+.admin-profile .container table td {
+    font-size: 17px;
+    height: 20px;
+}
+.admin-profile .container h2 {
+    font-size: 30px;
 }
 
 .admin-profile-container {
@@ -275,7 +285,7 @@ header h1 {
     background-color: #733311;
     border: 2px solid #733311;
     padding: 10px 30px;
-    margin-top: 25px;
+    margin-top: 5px;
     display: flex;
     justify-content: center;
     border-radius: 25px;
