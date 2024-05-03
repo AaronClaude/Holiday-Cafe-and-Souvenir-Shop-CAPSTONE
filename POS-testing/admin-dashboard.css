@@ -22,7 +22,7 @@ header {
     background: #FFEDD2;
     font-weight: 400;
     font-style: normal;
-    color: #252525;
+    color: #733311;
     border-bottom: 2px solid #733311;
     position: fixed;
     display: flex;
@@ -75,10 +75,17 @@ header h1 {
 .sidebox-1 .container img {
     width: 90px; 
     height: auto;
+    border: #733311 3px solid;
     border-radius: 50%;
     margin-top: 15px;
     margin-bottom: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
 }
+
+.sidebox-1 .container img:hover {
+    transform: scale(1.1);
+  }
 
 .sidebox-1 .container h3 {
     font-size: 17px;
@@ -188,4 +195,87 @@ header h1 {
     border: 2px #733311 solid;
     background-color: #FFEDD2;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (min-width: 1024px) {
+    .sidebox-1 {
+        position: relative;
+        width: 350px;
+        height: 230px;
+        top: 100px;
+        left: 25px;
+        border-radius: 15px;
+        border: 2px #733311 solid;
+        background-color: #FFEDD2;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    }
+    
+    
+    .sidebox-1 .container {
+        text-align: center;
+        color: #733311;
+        margin-top: 15px;
+    }
+    
+    .sidebox-1 .container img {
+        width: 80px; 
+        height: auto;
+        border-radius: 50%;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    .sidebox-1 .container h2 {
+        font-size: 20px;
+    }
+    
+    .sidebox-1 .container h3 {
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+    
+    .sidebox-1 .container a {
+        color: #733311;
+        text-decoration: none;
+        transition: 0.3s ease;
+    }
+
+
+    .sidebox-2 {
+        position: relative;
+        width: 350px;
+        height: 100px;
+        top: 120px;
+        left: 25px;
+        border-radius: 15px;
+        border: 2px #733311 solid;
+        background-color: #FFEDD2;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    }
+    
+    .sidebox-2 .container {
+        display: block;
+        color: #733311;
+        margin-top: 10px;
+    }
+    
+    .sidebox-2 .container a {
+        color: #733311;
+        font-weight: 700;
+        font-size: 14px;
+        margin-left: 15px;
+    }
+
+
+    .dashboard {
+        position: relative;
+        margin-top: -295px;
+        width: 850px;
+        height: 475px;
+        left: 400px;
+        border-radius: 15px;
+        border: 2px #733311 solid;
+        background-color: #FFEDD2;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    }
 }
