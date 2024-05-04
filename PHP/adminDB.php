@@ -29,7 +29,7 @@ if (isset ($_POST ['empid'] ) && isset ($_POST ['password'])) {
                 $_SESSION['empid']=$row['empid'];
                 $_SESSION['password']=$row['password'];
                 $_SESSION['id']=$row['id'];
-                header("Location:ADMNpanel.php");
+                header("Location:admin-dashboard.php");
                 exit();
             }else{
                 header ("Location:adminlogin.php?error=Incorrect User name or Password");

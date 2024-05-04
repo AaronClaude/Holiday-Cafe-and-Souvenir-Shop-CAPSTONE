@@ -1,6 +1,6 @@
 <!-- 
 
-    <?php
+<?php
 include 'DBconn.php';
 session_start();
 $empid= $_SESSION['empid'];
@@ -36,7 +36,7 @@ if (isset ($_SESSION ['empid'] ) && isset ($_SESSION ['password'])){
      <!-- Box Icons -->
      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <link rel="stylesheet" href="admin-dashboard.css">
+    <link rel="stylesheet" href="../CSS/admin-dashboard.css">
     <title>POS - DASHBOARD</title>
 </head>
 <body>
@@ -47,11 +47,28 @@ if (isset ($_SESSION ['empid'] ) && isset ($_SESSION ['password'])){
         </div>
     </header>
 
+    <?php
+     $sql = "SELECT * FROM `admin` WHERE empid='$empid' ";
+     $result = mysqli_query($con, $sql);
+ 
+     // Check if user exists
+     if(mysqli_num_rows($result) > 0) {
+         $row = mysqli_fetch_array($result);
+         $empid = $row['empid'];
+         $email = $row['email'];
+         $mobile = $row['mobile'];
+         $password = $row['password'];
+         $image = $row['image'];
+     
+     }
+ 
+?> 
+
     <section class="sidebox-1">
         <div class="container">
             <h2>ADMIN PROFILE</h2>
-            <img src="../IMG/logos/nav-logo.png" alt="profile icon">
-            <h3>Employee No. <?php echo $fetch['empid']; ?></h3>
+            <img src="profileimg/<?php echo $image; ?>" alt="profile icon">
+            <h3>Employee No. <?php echo $empid; ?></h3>
             <a href="#" id="open-admin">See more</a>
         </div>
     </section>
@@ -70,7 +87,7 @@ if (isset ($_SESSION ['empid'] ) && isset ($_SESSION ['password'])){
             <div class="container">
                 <a href="#" class="register-btn">CREATE NEW ACCOUNT</a>
                 <br>
-                <a href="#" class="logout-btn">LOGOUT</a>
+                <a href="../index.php" class="logout-btn">LOGOUT</a>
             </div>
         </section>
     
@@ -81,20 +98,20 @@ if (isset ($_SESSION ['empid'] ) && isset ($_SESSION ['password'])){
 
             <div class="main-content">
                 <div class="card-1">
-                    <a href="CXacc.php">Customers</a>
-                    <p>0</p> <!-- <?= getCount('useracc')?>  Palitan mo nalang-->
+                    <a href="useracc.php">Customers</a>
+                    <p>  <?= getCount('useracc')?> </p>
                 </div>
                 <div class="card-1">
-                    <a href="AdminACC.php">Admins</a>
-                    <p>0</p> <!--  <?= getCount('admin')?>  Palitan mo nalang-->
+                    <a href="adminacc.php">Admins</a>
+                    <p> <?= getCount('admin')?> </p>
                 </div>
                 <div class="card-1">
-                    <a href="admin.php">Cashiers</a>
-                    <p>0</p> <!-- <?= getCount('cashier')?>  Palitan mo nalang-->
+                    <a href="cashieracc.php">Cashiers</a>
+                    <p><?= getCount('cashier')?> </p>
                 </div>
                 <div class="card-1">
                     <a href="Orderhistory.php">Sales</a>
-                    <p>0</p> <!--  <?= getCount('useracc')?>  Palitan mo nalang-->
+                    <p> <?= getCount('useracc')?>  </p>
                 </div>
             </div>
 
@@ -126,22 +143,22 @@ if (isset ($_SESSION ['empid'] ) && isset ($_SESSION ['password'])){
 
                     <div class="admin-profile-container">
                         <h2>ADMIN PROFILE</h2>
-                        <img src="../IMG/logos/nav-logo.png" alt="profile icon">
+                        <img src="profileimg/<?php echo $image; ?>" alt="profile icon">
                     </div>
                     
                 <table>
                     <th>ADMIN INFORMATION</th>
                     <tr>
                         <td>Email:</td>
-                        <td><?php echo $fetch['email']; ?></td>
+                        <td><?php echo $email; ?></td>
                     </tr>
                     <tr>
                         <td>Contact No.</td>
-                        <td><?php echo $fetch['mobile']; ?></td>
+                        <td><?php echo $mobile; ?></td>
                     </tr>
                     <tr>
                         <td>Employee ID:</td>
-                        <td><?php echo $fetch['empid']; ?></td>
+                        <td><?php echo $empid; ?></td>
                     </tr>
                     <tr>
                         <td>Password:</td>
@@ -149,8 +166,9 @@ if (isset ($_SESSION ['empid'] ) && isset ($_SESSION ['password'])){
                     </tr>
         
                 </table>
-
-                <a href="#" class="update-btn">UPDATE PROFILE</a>
+                <button class="update-btn">
+                <a href="adminacc.php ">Update</a>
+                </button>
             </div>
         </div>
     
@@ -176,7 +194,7 @@ if (isset ($_SESSION ['empid'] ) && isset ($_SESSION ['password'])){
 
     </section>
 </body>
-<script src="admin-dashboard.js"></script>
+<script src="../JS/admin-dashboard.js"></script>
 
 <!-- Chart JS -->
 <script
@@ -193,6 +211,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
     header("Location:../index.php");
     exit();
 }
+
 ?>
 
 -->

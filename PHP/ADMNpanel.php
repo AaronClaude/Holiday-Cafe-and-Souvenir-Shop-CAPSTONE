@@ -118,7 +118,7 @@ if (isset ($_SESSION ['empid'] ) && isset ($_SESSION ['password'])){
    <div class="box-container">
         <div class="box">
             <article>
-                <a href="CXacc.php">CX Acc</a>
+                <a href="adminacc.php">CX Acc</a>
                 <h5>
                    <?= getCount('useracc')?>
                 </h5>

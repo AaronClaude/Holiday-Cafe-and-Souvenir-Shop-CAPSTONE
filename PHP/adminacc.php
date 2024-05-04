@@ -15,7 +15,7 @@ if(!$con){
 <div>
     
                 <div class="ADD">
-                <p><a href="ADMNPanel.php">BACK ></a></p>
+                <p><a href="admin-dashboard.php">BACK ></a></p>
                 </div>
 
     <table class="table">
@@ -27,6 +27,7 @@ if(!$con){
                     <th scope="col">Mobile No.</th>
                     <th scope="col">Password</th>
                     <th scope="col">Profile</th>
+                    <th scope="col">Update</th>
                     <th scope="col">Delete</th>
                     </tr>
                 </thead>
@@ -58,8 +59,13 @@ if(!$con){
                         </td>
                        
                         <td>
+                        <button class="button"> 
+                                <a href="adminupdate.php? updateempid='.$empid.' ">Update</a>
+                            </button>
+                        </td>
+                        <td>
                             <button class="button"> 
-                                <a href="adminaccdelete.php? deleteid='.$empid.'">Delete</a>
+                                <a href="adminaccdelete.php? deleteid='.$empid.' ">Delete</a>
                             </button>
                         </td>
 
