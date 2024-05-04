@@ -1,3 +1,27 @@
+<!-- 
+
+    <?php
+include 'DBconn.php';
+session_start();
+$empid= $_SESSION['empid'];
+if (isset ($_SESSION ['empid'] ) && isset ($_SESSION ['password'])){
+
+    function getCount($tableName) 
+    {
+    global $con;
+    $table=mysqli_real_escape_string($con, $tableName);
+    $query ="SELECT * FROM $table";
+    $result = mysqli_query($con,$query);
+    $totalCount = mysqli_num_rows($result);
+    return $totalCount;
+    }
+
+?>
+
+-->
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,8 +59,9 @@
     <section class="sidebox-2">
         <div class="container">
             <ul>
-                <li><a href="#" class="active">DASHBOARD</a></li>
-                <li><a href="#">ABOUT</a></li>
+                <li><a href="#" class="active"><i class='bx bxs-dashboard'></i>DASHBOARD</a></li>
+                <li><a href="#" id="toggleGraph"><i class='bx bxs-objects-vertical-bottom'></i>GRAPHS</a></li>
+                <li><a href="#"><i class='bx bxs-info-circle' ></i>ABOUT</a></li>
               </ul>
         </div>
     </section>
@@ -52,9 +77,49 @@
 
     <section class="dashboard">
         <div class="container">
-            
+            <h1><i class='bx bxs-dashboard'></i>My Dashboard</h1>
+
+            <div class="main-content">
+                <div class="card-1">
+                    <a href="CXacc.php">Customers</a>
+                    <p>0</p> <!-- <?= getCount('useracc')?>  Palitan mo nalang-->
+                </div>
+                <div class="card-1">
+                    <a href="AdminACC.php">Admins</a>
+                    <p>0</p> <!--  <?= getCount('admin')?>  Palitan mo nalang-->
+                </div>
+                <div class="card-1">
+                    <a href="admin.php">Cashiers</a>
+                    <p>0</p> <!-- <?= getCount('cashier')?>  Palitan mo nalang-->
+                </div>
+                <div class="card-1">
+                    <a href="Orderhistory.php">Sales</a>
+                    <p>0</p> <!--  <?= getCount('useracc')?>  Palitan mo nalang-->
+                </div>
+            </div>
+
+            <div class="second-content">
+                <div class="card-2">
+                    <i class='bx bxs-user-pin'></i><br>
+                    <a href="#">Customer Profiles</a>
+                </div>
+                <div class="card-2">
+                    <i class='bx bx-cart-add' ></i><br>
+                    <a href="#">Add Products</a>
+                </div>
+                <div class="card-2">
+                    <i class='bx bxs-user-circle'></i><br>
+                    <a href="#">Admin Profiles</a>
+                </div>
+                <div class="card-2">
+                    <i class='bx bx-history' ></i><br>
+                    <a href="#">Sales History</a>
+                </div>
+            </div>
         </div>
- 
+    </section>
+
+
         <div class="admin-profile" id="admin-profile">
             <div class="container">
                 <span class="close-btn">&times;</span>
@@ -88,7 +153,46 @@
                 <a href="#" class="update-btn">UPDATE PROFILE</a>
             </div>
         </div>
+    
+    <section class = "hidden" id="my-graph">
+        <div class="container">
+            <div class="chart">
+                <div class="bar" style="--bar-height: 90%;" data-sales="January"></div>
+                <div class="bar" style="--bar-height: 60%;" data-sales="February"></div>
+                <div class="bar" style="--bar-height: 40%;" data-sales="March"></div>
+                <div class="bar" style="--bar-height: 70%;" data-sales="April"></div>
+                <div class="bar" style="--bar-height: 90%;" data-sales="May"></div>
+                <div class="bar" style="--bar-height: 50%;" data-sales="June"></div>
+                <div class="bar" style="--bar-height: 75%;" data-sales="July"></div>
+                <div class="bar" style="--bar-height: 65%;" data-sales="August"></div>
+                <div class="bar" style="--bar-height: 85%;" data-sales="September"></div>
+                <div class="bar" style="--bar-height: 55%;" data-sales="October"></div>
+                <div class="bar" style="--bar-height: 95%;" data-sales="November"></div>
+                <div class="bar" style="--bar-height: 45%;" data-sales="December"></div>
+            </div>
+            
+
+        </div>
+
     </section>
 </body>
 <script src="admin-dashboard.js"></script>
+
+<!-- Chart JS -->
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+
+</script>
+
 </html>
+
+<!--
+
+<?php
+}else{
+    header("Location:../index.php");
+    exit();
+}
+?>
+
+-->

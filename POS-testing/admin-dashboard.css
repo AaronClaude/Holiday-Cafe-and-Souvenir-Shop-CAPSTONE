@@ -53,6 +53,7 @@ header h1 {
     margin-left: 6rem;
 }
 
+/* Side Profile info box */
 .sidebox-1 {
     position: relative;
     width: 350px;
@@ -102,6 +103,7 @@ header h1 {
     text-decoration: underline;
 }
 
+/* Side navigation box */
 .sidebox-2 {
     position: relative;
     width: 350px;
@@ -135,7 +137,7 @@ header h1 {
 .sidebox-2 ul li {
     padding: 5px 15px;
 }
-  
+
 .sidebox-2 ul li a {
     text-decoration: none;
     color: #fff;
@@ -145,6 +147,11 @@ header h1 {
   
 .sidebox-2 ul li a:hover {
     color: #471f09;
+}
+
+.sidebox-2 ul li i {
+    font-size: 25px;
+    padding: 0 10px;
 }
 
 .register-btn {
@@ -183,18 +190,6 @@ header h1 {
     background-color: transparent;
     color: #733311;
     transition: 0.5s ease;
-}
-
-.dashboard {
-    position: relative;
-    margin-top: -420px;
-    width: 1010px;
-    height: 600px;
-    left: 400px;
-    border-radius: 15px;
-    border: 2px #733311 solid;
-    background-color: #FFEDD2;
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
 }
 
 .admin-profile {
@@ -299,6 +294,216 @@ header h1 {
     transition: 0.5s ease;
 }
 
+/* Main Dashboard UI */
+.dashboard {
+    position: relative;
+    margin-top: -420px;
+    width: 1010px;
+    height: 600px;
+    left: 400px;
+    border-radius: 15px;
+    border: 2px #733311 solid;
+    background-color: #FFEDD2;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.dashboard .container h1 {
+    font-size: 30px;
+    color: #733311;
+    margin: 10px;
+    margin-bottom: 20px;
+}
+.dashboard .container h1 i {
+    font-size: 35px;
+    margin-right: 10px;
+}
+.dashboard .container .main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.dashboard .container .card-1 {
+    background-color: #F4F1EC;
+    border-radius: 8px;
+    text-align: center;
+    color: #733311;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: calc(50% - 90px);
+    height: 100px;
+    width: 175px;
+    margin: 0 20px 40px;
+}
+
+
+.dashboard .container .card-1:last-child {
+    margin-right: 0;
+}
+
+.dashboard .container .card-1 a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #733311;
+    font-size: 17px;
+    margin-top: 0;
+}
+
+.dashboard .container .card-1 p {
+    font-size: 25px;
+    margin: 10px 0 0;
+}
+
+.second-content {
+    display: flex;
+    justify-items: center;
+    flex-wrap: wrap;
+}
+
+.second-content .card-2 {
+    background-color: #F4F1EC;
+    border-radius: 8px;
+    text-align: center;
+    color: #733311;
+    border: 2px solid #733311;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: calc(50% - 100px);
+    height: 150px;
+    width: 225px;
+    margin: -15px 10px 40px 200px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.second-content .card-2:hover {
+    transform: scale(1.1);
+}
+.second-content .card-2 i {
+    font-size: 75px;
+    margin-top: 5px;
+}
+
+.dashboard .container .card-2 a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #733311;
+    font-size: 17px;
+    margin-top: 0;
+}
+
+.dashboard .container .card-2 a:hover {
+    color: #471f09;
+    text-decoration: underline;
+}
+
+
+#my-graph {
+    position: relative;
+    margin-top: -420px;
+    width: 1010px;
+    height: 600px;
+    left: 400px;
+    border-radius: 15px;
+    border: 2px #733311 solid;
+    background-color: #FFEDD2;
+}
+
+#my-graph .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.chart {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 600px;
+    height: 400px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 20px auto;
+}
+
+.bar {
+    width: 6.5%;
+    background-color: #4CAF50;
+    transition: height 0.5s ease-in-out, background-color 0.3s;
+}
+
+.bar:hover {
+    background-color: #45a049;
+}
+
+.bar::after {
+    content: attr(data-sales);
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+}
+
+[data-sales="January"] {
+    background-color: #2196F3;
+}
+
+[data-sales="February"] {
+    background-color: #9C27B0;
+}
+
+[data-sales="March"] {
+    background-color: #FF5722;
+}
+
+[data-sales="April"] {
+    background-color: #673AB7;
+}
+
+[data-sales="May"] {
+    background-color: #FFC107;
+}
+
+[data-sales="June"] {
+    background-color: #8BC34A;
+}
+
+[data-sales="July"] {
+    background-color: #03A9F4;
+}
+
+[data-sales="August"] {
+    background-color: #E91E63;
+}
+
+[data-sales="September"] {
+    background-color: #FF9800;
+}
+
+[data-sales="October"] {
+    background-color: #9E9E9E;
+}
+
+[data-sales="November"] {
+    background-color: #607D8B;
+}
+
+[data-sales="December"] {
+    background-color: #FFEB3B;
+}
+
+
+
 @keyframes modalPopUp {
     from {
       transform: scale(0);
@@ -309,6 +514,8 @@ header h1 {
   }
 
 @media only screen and (min-width: 1024px) {
+
+    /* Side Profile info box */
     .sidebox-1 {
         position: relative;
         width: 350px;
@@ -320,7 +527,6 @@ header h1 {
         background-color: #FFEDD2;
         box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
     }
-    
     
     .sidebox-1 .container {
         text-align: center;
@@ -351,7 +557,7 @@ header h1 {
         transition: 0.3s ease;
     }
 
-
+    /* Side navigation box */
     .sidebox-2 {
         position: relative;
         width: 350px;
@@ -377,7 +583,18 @@ header h1 {
         margin-left: 15px;
     }
 
+    .admin-profile .container {
+        margin: 5% auto; 
+        padding: 30px;
+        border-radius: 15px;
+        border: 2px #733311 solid;
+        background-color: #FFEDD2;
+        width: 450px;
+        height: 500px; 
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+    }
 
+    /* Main dashboard UI */
     .dashboard {
         position: relative;
         margin-top: -295px;
@@ -389,25 +606,13 @@ header h1 {
         background-color: #FFEDD2;
         box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
     }
-
-
-    .admin-profile .container {
-        margin: 5% auto; 
-        padding: 30px;
-        border-radius: 15px;
-        border: 2px #733311 solid;
-        background-color: #FFEDD2;
-        width: 450px;
-        height: 500px; 
-        box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
-    }
     
 }
 
 @media only screen and (max-width: 1920px) {
     .dashboard {
         position: relative;
-        margin-top: -295px;
+        margin-top: -385px;
         width: 1110px;
         height: 570px;
         left: 400px;
@@ -415,5 +620,54 @@ header h1 {
         border: 2px #733311 solid;
         background-color: #FFEDD2;
         box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    }
+
+    #my-graph {
+        position: relative;
+        margin-top: -570px;
+        width: 1110px;
+        height: 570px;
+        left: 400px;
+        border-radius: 15px;
+        border: 2px #733311 solid;
+        background-color: #FFEDD2;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Side navigation box */
+    .sidebox-2 {
+        position: relative;
+        width: 350px;
+        height: 190px;
+        top: 120px;
+        left: 25px;
+        border-radius: 15px;
+        border: 2px #733311 solid;
+        background-color: #FFEDD2;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .sidebox-2 .container {
+        display: block;
+        color: #733311;
+        margin-top: 25px;
+    }
+
+    .sidebox-2 .container a {
+        color: #733311;
+        font-weight: 700;
+        font-size: 20px;
+        margin-left: 15px;
+    }
+
+    .admin-profile .container {
+        margin: 6% auto; 
+        padding: 30px;
+        border-radius: 15px;
+        border: 2px #733311 solid;
+        background-color: #FFEDD2;
+        width: 450px;
+        height: 500px; 
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
     }
 }

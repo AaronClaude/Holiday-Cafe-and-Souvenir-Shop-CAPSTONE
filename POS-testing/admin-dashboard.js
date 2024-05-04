@@ -25,4 +25,12 @@ window.onclick = function(event) {
 }
 
 
+// Hide and Show for Graph Div
+document.getElementById("toggleGraph").addEventListener("click", function() {
+  var graphSection = document.getElementById("my-graph");
+  graphSection.classList.toggle("hidden");
+});
+
+
+
 
