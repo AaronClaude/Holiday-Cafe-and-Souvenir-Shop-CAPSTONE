@@ -14,10 +14,10 @@ form{
     margin-right: auto;
     padding:30px;
     font-family:sans-serif;
-    height: 450px;
+    height: 475px;
 
 }
-input[type=text], input[type=password] {
+input[type=text], input[type=password],input[type=email] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px auto;

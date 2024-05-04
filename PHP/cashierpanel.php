@@ -3,7 +3,7 @@
 include 'DBconn.php';
 session_start();
 
-if (isset ($_SESSION ['empid'] ) && isset ($_SESSION ['password'])){
+if (isset ($_SESSION ['email'] ) && isset ($_SESSION ['password'])){
 
 
 

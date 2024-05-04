@@ -21,12 +21,14 @@ if(!$con){
     <table class="table">
                 <thead>
                     <tr>
-                    
+                    <th scope="col">Profile Picture</th>
                     <th scope="col">Empolyee ID</th>
                     <th scope="col">Email</th>
+                    <th scope="col">Firstname</th>
+                    <th scope="col">Lastname</th>
                     <th scope="col">Mobile No.</th>
+                    <th scope="col">Address</th>
                     <th scope="col">Password</th>
-                    <th scope="col">Profile</th>
                     <th scope="col">Update</th>
                     <th scope="col">Delete</th>
                     </tr>
@@ -37,26 +39,33 @@ if(!$con){
                             $result=mysqli_query($con,$sql);
                             if($result){
                                 while($row=mysqli_fetch_assoc($result)){
-                                   
+                                    $image = $row['image'];
                                     $empid = $row['empid'];
                                     $email = $row['email'];
+                                    $fname = $row['fname'];
+                                    $lname = $row['lname'];
                                     $mobile = $row['mobile'];
+                                    $address = $row['address'];
                                     $password = $row['password'];
-                                    $image = $row['image'];
+                                    
                                    
 
 
                         echo
                         '<tr>
-                      
-                        <td> '.$empid.' </td>
-                        <td> '.$email.' </td>
-                        <td> '.$mobile.' </td>
-                        <td> '.$password.' </td>
                         <td>
                             <img src="profileimg/'.$image.'" />
 
                         </td>
+                      
+                        <td> '.$empid.' </td>
+                        <td> '.$email.' </td>
+                        <td> '.$fname.' </td>
+                        <td> '.$lname.' </td>
+                        <td> '.$mobile.' </td>
+                        <td> '.$address.' </td>
+                        <td> '.$password.' </td>
+                        
                        
                         <td>
                         <button class="button"> 

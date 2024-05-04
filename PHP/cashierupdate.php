@@ -4,7 +4,7 @@ session_start();
 // Check if updateid is set in the URL
 if(isset($_GET['updateempid'])){
     $empid = $_GET['updateempid'];
-    $sql = "SELECT * FROM `admin` WHERE empid='$empid' ";
+    $sql = "SELECT * FROM `cashier` WHERE empid='$empid' ";
     $result = mysqli_query($con, $sql);
 
     // Check if user exists
@@ -37,7 +37,7 @@ if(isset($_POST['submit']) && isset($_FILES['image'])) {
     $folder = 'profileimg/'.$image;
 
         
-            $sql = "UPDATE `admin` SET  email = '$email', fname = '$fname', lname = '$lname', mobile = '$mobile', 
+            $sql = "UPDATE `cashier` SET  email = '$email', fname = '$fname', lname = '$lname', mobile = '$mobile', 
             address = '$address' , password = '$password', image = '$image' WHERE empid = '$empid'";   
             $result = mysqli_query($con, $sql);
             if($result){

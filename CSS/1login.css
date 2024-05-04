@@ -94,19 +94,19 @@ p {
     height: 100%;
 }
 
-.acc-container input{
+.acc-container input[type=text], input[type=password], input[type=email]  {
     padding: 10px 20px; 
     background-color: #F4F1EC;
-    width: 19rem;
-    font-size: 500;
-    font-size: 15px;
+    width: 300px;
+    height: 37px;
+    font-size: 10px;
     border: 2px solid #a7a7a7;
     border-radius: 25px;
     margin-bottom: 10px;    
     transition: 0.3s ease;
 }
 
-.acc-container input:hover {
+.acc-container input[type=text], input[type=password], input[type=email]:hover {
     border:  2px solid #733311;
 }
 

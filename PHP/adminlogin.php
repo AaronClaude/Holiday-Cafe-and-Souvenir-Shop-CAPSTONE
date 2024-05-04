@@ -2,15 +2,17 @@
 
 include 'DBconn.php';
 if(isset($_POST['submit'])&& isset($_FILES['image'])){
-  $empid = $_POST['empid'];
   $email = $_POST['email'];
-  $mobile = $_POST['mobile'];
+  $fname = $_POST['fname'];
+  $lname = $_POST['lname'];
+  $mobile =$_POST['mobile'];
+  $address =$_POST['address'];
   $password =$_POST['password'];
   $image = $_FILES['image']['name'];
   $tmp_name = $_FILES['image']['tmp_name'];
   $folder = 'profileimg/'.$image;
   
-  $sql= mysqli_query($con,"INSERT INTO `admin`(empid,email,mobile,password,image) values ('$empid','$email','$mobile','$password','$image')");
+  $sql= mysqli_query($con,"INSERT INTO `admin`(email,fname,lname,mobile,address,password,image) values ('$email','$fname','$lname','$mobile','$address','$password','$image')");
   if(move_uploaded_file($tmp_name,$folder)){
     echo "<h2>Successfully Registered</h2>";
   }else{
@@ -38,7 +40,7 @@ if(isset($_POST['submit'])&& isset($_FILES['image'])){
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="../CSS/login.css">
+  <link rel="stylesheet" href="../CSS/1login.css">
   <title>H%S - LOGIN FORM</title>
 </head>
 
@@ -47,9 +49,11 @@ if(isset($_POST['submit'])&& isset($_FILES['image'])){
     <div class="form-container sign-up">
       <form method="post" action="" enctype="multipart/form-data">
         <h1>REGISTER</h1>
-        <input type="text" placeholder="Enter Employee No." name="empid">
-        <input type="text" placeholder="Enter Email" name="email">
+        <input type="email" placeholder="Enter Email" name="email">
+        <input type="text" placeholder="Enter Firstname" name="fname">
+        <input type="text" placeholder="Enter Lastname" name="lname">
         <input type="text" placeholder="Enter Mobile No." name="mobile">
+        <input type="text" placeholder="Enter Address" name="address">       
         <input type="password" placeholder="Enter Password" name="password">
         <input type="file" name="image" id="file">
 
@@ -64,7 +68,7 @@ if(isset($_POST['submit'])&& isset($_FILES['image'])){
           <p class="error"><?php echo $_GET['error']; ?></p>
         <?php } ?>
         <h1>SIGN IN</h1>
-        <input type="text" placeholder="Enter Username" name="empid">
+        <input type="email" placeholder="Enter Email" name="email">
         <input type="password" placeholder="Enter Password" name="password">
         <button type="submit" class="btn-1">LOGIN</button>
         <h3>OR</h3>

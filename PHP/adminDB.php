@@ -2,7 +2,7 @@
 session_start();
 include "DBconn.php";
 
-if (isset ($_POST ['empid'] ) && isset ($_POST ['password'])) {
+if (isset ($_POST ['email'] ) && isset ($_POST ['password'])) {
     
     function validate ($data ){
         $data = trim($data) ;
@@ -10,10 +10,10 @@ if (isset ($_POST ['empid'] ) && isset ($_POST ['password'])) {
         $data = htmlspecialchars ($data);
         return $data;
   }
-    $empid =validate ($_POST['empid']);
+    $email =validate ($_POST['email']);
     $password =validate ($_POST ['password']);
 
-    if (empty ($empid) ) {
+    if (empty ($email) ) {
         header ("Location:adminlogin.php?error=User Name is required");
         exit ();
     }else if(empty ($password) ){
@@ -21,14 +21,14 @@ if (isset ($_POST ['empid'] ) && isset ($_POST ['password'])) {
         exit ();
 
     }else{
-        $sql = "SELECT * FROM `admin` WHERE empid='$empid' AND password= '$password'";
+        $sql = "SELECT * FROM `admin` WHERE email='$email' AND password= '$password'";
         $result=mysqli_query($con, $sql);
         if (mysqli_num_rows($result)===1){
             $row = mysqli_fetch_assoc($result);
-            if ($row['empid']===$empid && $row['password']===$password){
-                $_SESSION['empid']=$row['empid'];
+            if ($row["email"] === $email && $row['password'] === $password){
+                $_SESSION['email']=$row['email'];
                 $_SESSION['password']=$row['password'];
-                $_SESSION['id']=$row['id'];
+                $_SESSION['image']=$row['image'];
                 header("Location:admin-dashboard.php");
                 exit();
             }else{

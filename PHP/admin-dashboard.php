@@ -3,8 +3,15 @@
 <?php
 include 'DBconn.php';
 session_start();
-$empid= $_SESSION['empid'];
-if (isset ($_SESSION ['empid'] ) && isset ($_SESSION ['password'])){
+$empid = $_SESSION['empid'];
+if (isset ($_SESSION ['email'] ) && isset ($_SESSION ['password'])){
+    $email = $_SESSION['email'];
+    $fname = $_SESSION['fname'];
+    $lname = $_SESSION['lname'];
+    $mobile =$_SESSION['mobile'];
+    $address = $_SESSION['address'];
+    $password = $_SESSION['password'];
+    $image= $_SESSION['image'];
 
     function getCount($tableName) 
     {
@@ -49,16 +56,19 @@ if (isset ($_SESSION ['empid'] ) && isset ($_SESSION ['password'])){
 
     <?php
      $sql = "SELECT * FROM `admin` WHERE empid='$empid' ";
-     $result = mysqli_query($con, $sql);
- 
+     $result = mysqli_query($con,$sql);
      // Check if user exists
      if(mysqli_num_rows($result) > 0) {
          $row = mysqli_fetch_array($result);
+         $image = $row['image'];
          $empid = $row['empid'];
          $email = $row['email'];
+         $fname = $row['fname'];
+         $lname = $row['lname'];
          $mobile = $row['mobile'];
+         $address = $row['address'];
          $password = $row['password'];
-         $image = $row['image'];
+         
      
      }
  
@@ -67,8 +77,8 @@ if (isset ($_SESSION ['empid'] ) && isset ($_SESSION ['password'])){
     <section class="sidebox-1">
         <div class="container">
             <h2>ADMIN PROFILE</h2>
-            <img src="profileimg/<?php echo $image; ?>" alt="profile icon">
-            <h3>Employee No. <?php echo $empid; ?></h3>
+            <img src="profileimg/<?php echo $image; ?>"/>
+            <h3>Email: <?php echo $email;?></h3>
             <a href="#" id="open-admin">See more</a>
         </div>
     </section>
@@ -150,15 +160,15 @@ if (isset ($_SESSION ['empid'] ) && isset ($_SESSION ['password'])){
                     <th>ADMIN INFORMATION</th>
                     <tr>
                         <td>Email:</td>
-                        <td><?php echo $email; ?></td>
+                        <td><?php echo $email;?></td>
                     </tr>
                     <tr>
                         <td>Contact No.</td>
-                        <td><?php echo $mobile; ?></td>
+                        <td><?php echo $mobile;?></td>
                     </tr>
                     <tr>
                         <td>Employee ID:</td>
-                        <td><?php echo $empid; ?></td>
+                        <td><?php echo $fname;?></td>
                     </tr>
                     <tr>
                         <td>Password:</td>
