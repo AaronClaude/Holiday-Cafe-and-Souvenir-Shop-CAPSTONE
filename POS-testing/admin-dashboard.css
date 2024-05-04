@@ -403,3 +403,17 @@ header h1 {
     }
     
 }
+
+@media only screen and (max-width: 1920px) {
+    .dashboard {
+        position: relative;
+        margin-top: -295px;
+        width: 1110px;
+        height: 570px;
+        left: 400px;
+        border-radius: 15px;
+        border: 2px #733311 solid;
+        background-color: #FFEDD2;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    }
+}
