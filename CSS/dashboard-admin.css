@@ -222,8 +222,7 @@ header h1 {
 }
 
 .admin-profile .container table th{
-    font-size: 20px;
-    text-align: center;
+    font-size: 16px;
 }
 
 .admin-profile .container table td {
@@ -423,83 +422,6 @@ header h1 {
 
 .hidden {
     display: none;
-}
-
-
-.chart {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    width: 600px;
-    height: 400px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 20px auto;
-}
-
-.bar {
-    width: 6.5%;
-    background-color: #4CAF50;
-    transition: height 0.5s ease-in-out, background-color 0.3s;
-}
-
-.bar:hover {
-    background-color: #45a049;
-}
-
-.bar::after {
-    content: attr(data-sales);
-    display: block;
-    text-align: center;
-    margin-top: 5px;
-}
-
-[data-sales="January"] {
-    background-color: #2196F3;
-}
-
-[data-sales="February"] {
-    background-color: #9C27B0;
-}
-
-[data-sales="March"] {
-    background-color: #FF5722;
-}
-
-[data-sales="April"] {
-    background-color: #673AB7;
-}
-
-[data-sales="May"] {
-    background-color: #FFC107;
-}
-
-[data-sales="June"] {
-    background-color: #8BC34A;
-}
-
-[data-sales="July"] {
-    background-color: #03A9F4;
-}
-
-[data-sales="August"] {
-    background-color: #E91E63;
-}
-
-[data-sales="September"] {
-    background-color: #FF9800;
-}
-
-[data-sales="October"] {
-    background-color: #9E9E9E;
-}
-
-[data-sales="November"] {
-    background-color: #607D8B;
-}
-
-[data-sales="December"] {
-    background-color: #FFEB3B;
 }
 
 

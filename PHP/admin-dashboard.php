@@ -43,7 +43,7 @@ if (isset ($_SESSION ['email'] ) && isset ($_SESSION ['password'])){
      <!-- Box Icons -->
      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <link rel="stylesheet" href="../CSS/admin-dashboard.css">
+    <link rel="stylesheet" href="../CSS/dashboard-admin.css">
     <title>POS - DASHBOARD</title>
 </head>
 <body>
@@ -87,7 +87,7 @@ if (isset ($_SESSION ['email'] ) && isset ($_SESSION ['password'])){
         <div class="container">
             <ul>
                 <li><a href="#" class="active"><i class='bx bxs-dashboard'></i>DASHBOARD</a></li>
-                <li><a href="#" id="toggleGraph"><i class='bx bxs-objects-vertical-bottom'></i>GRAPHS</a></li>
+                <li><a href="#" id="toggleGraph"><i class='bx bx-cart-add'></i>ADD PRODUCTS</a></li>
                 <li><a href="#"><i class='bx bxs-info-circle' ></i>ABOUT</a></li>
               </ul>
         </div>
@@ -131,8 +131,8 @@ if (isset ($_SESSION ['email'] ) && isset ($_SESSION ['password'])){
                     <a href="useracc.php">Customer Profiles</a>
                 </div>
                 <div class="card-2">
-                    <i class='bx bx-cart-add' ></i><br>
-                    <a href="#">Add Products</a>
+                    <i class='bx bxs-user-account'></i><br>
+                    <a href="#">User Profiles</a>
                 </div>
                 <div class="card-2">
                     <i class='bx bxs-user-circle'></i><br>
@@ -176,28 +176,15 @@ if (isset ($_SESSION ['email'] ) && isset ($_SESSION ['password'])){
                     </tr>
         
                 </table>
-                <button class="update-btn">
-                <a href="adminacc.php ">Update</a>
-                </button>
+                
+                <a href="adminacc.php" class="update-btn">Update</a>
+                
             </div>
         </div>
     
     <section class = "hidden" id="my-graph">
         <div class="container">
-            <div class="chart">
-                <div class="bar" style="--bar-height: 90%;" data-sales="January"></div>
-                <div class="bar" style="--bar-height: 60%;" data-sales="February"></div>
-                <div class="bar" style="--bar-height: 40%;" data-sales="March"></div>
-                <div class="bar" style="--bar-height: 70%;" data-sales="April"></div>
-                <div class="bar" style="--bar-height: 90%;" data-sales="May"></div>
-                <div class="bar" style="--bar-height: 50%;" data-sales="June"></div>
-                <div class="bar" style="--bar-height: 75%;" data-sales="July"></div>
-                <div class="bar" style="--bar-height: 65%;" data-sales="August"></div>
-                <div class="bar" style="--bar-height: 85%;" data-sales="September"></div>
-                <div class="bar" style="--bar-height: 55%;" data-sales="October"></div>
-                <div class="bar" style="--bar-height: 95%;" data-sales="November"></div>
-                <div class="bar" style="--bar-height: 45%;" data-sales="December"></div>
-            </div>
+            
             
 
         </div>
