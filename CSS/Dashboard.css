@@ -107,7 +107,7 @@ header h1 {
 .sidebox-2 {
     position: relative;
     width: 350px;
-    height: 125px;
+    height: 140px;
     top: 120px;
     left: 25px;
     border-radius: 15px;
@@ -150,7 +150,7 @@ header h1 {
 }
 
 .sidebox-2 ul li i {
-    font-size: 25px;
+    font-size: 20px;
     padding: 0 10px;
 }
 

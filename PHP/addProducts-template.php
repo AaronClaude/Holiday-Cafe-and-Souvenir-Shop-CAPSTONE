@@ -1,3 +1,41 @@
+<?php
+
+include 'DBconn.php';
+if(isset($_POST['submit'])&& isset($_FILES['image'])){
+  $pname = $_POST['pname'];
+  $pprice = $_POST['pprice'];
+  $pcategory = $_POST['pcategory'];
+  $image = $_FILES['image']['name'];
+  $tmp_name = $_FILES['image']['tmp_name'];
+  $folder = 'productimg/'.$image;
+  
+  $sql = mysqli_query($con,"INSERT INTO `products`(pname,pprice,pcategory,image) values ('$pname','$pprice','$pcategory','$image')");
+  if(move_uploaded_file($tmp_name,$folder)){
+    echo "<h2>Product Added</h2>";
+  }else{
+    die(mysqli_error($con));
+  }
+
+}
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,12 +44,18 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
+    <link rel="stylesheet" type="text/css" href="../CSS/Producttable.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <title>add products template</title>
+
+                
 </head>
+<div class="ADD">
+                <p><a href="admin-dashboard.php">BACK ></a></p>
+                </div>
 <body>
+                
     
     <section>
         <div class="container my-5">
@@ -22,31 +66,32 @@
                             Add Product
                         </div>
                         <div class="card-body">
-                            <form action="add_product.php" method="post" enctype="multipart/form-data">
+                            <form action="" method="post" enctype="multipart/form-data">
                                 <div class="mb-3">
                                     <label for="productName" class="form-label">Product Name</label>
-                                    <input type="text" class="form-control" id="productName" name="productName" required>
+                                    <input type="text" class="form-control" id="productName" name="pname" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="productPrice" class="form-label">Price</label>
-                                    <input type="number" class="form-control" id="productPrice" name="productPrice" required>
+                                    <input type="number" class="form-control" id="productPrice" name="pprice" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="productCategory" class="form-label">Category</label>
-                                    <select class="form-select" id="productCategory" name="productCategory" required>
+                                    <select class="form-select" id="productCategory" name="pcategory" required>
                                         <option value="">Select a category</option>
-                                        <option value="CPU">CPU</option>
-                                        <option value="Motherboard">Motherboard</option>
-                                        <option value="GPU">GPU</option>
-                                        <option value="RAM">RAM</option>
-                                        <option value="Storage">Storage</option>
+                                        <option value="Coffee">Coffee</option>
+                                        <option value="Seasonal/Special">Seasonal/Special</option>
+                                        <option value="Refreshments">Refreshments</option>
+                                        <option value="Delicacies">Delicacies</option>
+                                        <option value="Pastries">Pastries</option>
+                                        <option value="Souvenirs">Souvenirs</option>
                                     </select>
                                 </div>
                                 <div class="mb-3">
                                     <label for="productImage" class="form-label">Product Image</label>
-                                    <input type="file" class="form-control" id="productImage" name="productImage" accept="image/*" required>
+                                    <input type="file" class="form-control" id="productImage" name="image" accept="image/*" required>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Add Product</button>
+                                <button type="submit" name="submit" class="btn btn-primary">Add Product</button>
                             </form>
                         </div>
                     </div>
@@ -54,6 +99,14 @@
             </div>
         </div>
     </section>
+   
+
+
+
+
+
+
+
 
 </body>
 </html>

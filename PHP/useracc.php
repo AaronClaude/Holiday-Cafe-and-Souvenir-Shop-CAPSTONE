@@ -15,7 +15,7 @@ if(!$con){
 <div>
     
                 <div class="ADD">
-                <p><a href="ADMNPanel.php">BACK ></a></p>
+                <p><a href="admin-dashboard.php">BACK ></a></p>
                 </div>
 
     <table class="table">

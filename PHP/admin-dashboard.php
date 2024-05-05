@@ -43,7 +43,7 @@ if (isset ($_SESSION ['email'] ) && isset ($_SESSION ['password'])){
      <!-- Box Icons -->
      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <link rel="stylesheet" href="../CSS/dashboard-admin.css">
+    <link rel="stylesheet" href="../CSS/Dashboard.css">
     <title>POS - DASHBOARD</title>
 </head>
 <body>
@@ -87,7 +87,8 @@ if (isset ($_SESSION ['email'] ) && isset ($_SESSION ['password'])){
         <div class="container">
             <ul>
                 <li><a href="#" class="active"><i class='bx bxs-dashboard'></i>DASHBOARD</a></li>
-                <li><a href="#" id="toggleGraph"><i class='bx bx-cart-add'></i>ADD PRODUCTS</a></li>
+                <li><a href="products.php" class="active"><i class='bx bxs-dashboard'></i>PRODUCTS</a></li>
+                <li><a href="addProducts-template.php" id="toggleGraph"><i class='bx bx-cart-add'></i>ADD PRODUCTS</a></li>
                 <li><a href="#"><i class='bx bxs-info-circle' ></i>ABOUT</a></li>
               </ul>
         </div>
@@ -108,19 +109,19 @@ if (isset ($_SESSION ['email'] ) && isset ($_SESSION ['password'])){
 
             <div class="main-content">
                 <div class="card-1">
-                    <a href="useracc.php">Customers</a>
+                    <a href="#">Customers</a>
                     <p>  <?= getCount('useracc')?> </p>
                 </div>
                 <div class="card-1">
-                    <a href="adminacc.php">Admins</a>
+                    <a href="#">Admins</a>
                     <p> <?= getCount('admin')?> </p>
                 </div>
                 <div class="card-1">
-                    <a href="cashieracc.php">Cashiers</a>
+                    <a href="#">Cashiers</a>
                     <p><?= getCount('cashier')?> </p>
                 </div>
                 <div class="card-1">
-                    <a href="Orderhistory.php">Sales</a>
+                    <a href="#">Sales</a>
                     <p> <?= getCount('useracc')?>  </p>
                 </div>
             </div>
@@ -132,7 +133,7 @@ if (isset ($_SESSION ['email'] ) && isset ($_SESSION ['password'])){
                 </div>
                 <div class="card-2">
                     <i class='bx bxs-user-account'></i><br>
-                    <a href="#">User Profiles</a>
+                    <a href="cashieracc.php">Cashiers Profiles</a>
                 </div>
                 <div class="card-2">
                     <i class='bx bxs-user-circle'></i><br>
