@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
         cartItems.forEach(item => {
             const listItem = document.createElement('li');
             listItem.classList.add('list-group-item');
-            listItem.textContent = `${item.name} - $${item.price}`;
+            listItem.textContent = `${item.name} - ₱${item.price}`;
             cartList.appendChild(listItem);
             total += item.price;
         });
@@ -57,13 +57,42 @@ document.addEventListener('DOMContentLoaded', function () {
         if (totalPrice === 0) {
             alert('Your cart is empty. Please add some items before checkout.');
         } else {
-            alert(`Thank you for your purchase! Total price: $${totalPrice.toFixed(2)}`);
-            cartItems = [];
-            updateCart();   
-            cartSidebar.classList.remove('show');
+            // Display checkout modal
+            $('#checkoutModal').modal('show');
         }
     });
+
+    // Handle checkout form submission
+    const checkoutForm = document.getElementById('checkoutForm');
+
+    checkoutForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        
+        // You can customize this part to send the form data to your server for processing
+        
+        const formData = new FormData(checkoutForm);
+        const name = formData.get('name');
+        const email = formData.get('email');
+        const address = formData.get('address');
+        
+        // Example: Sending data via fetch API
+        // fetch('/checkout', {
+        //     method: 'POST',
+        //     body: formData
+        // }).then(response => {
+        //     if (response.ok) {
+        //         // Handle successful response
+        //     } else {
+        //         // Handle error response
+        //     }
+        // });
+
+        // Display receipt modal
+        $('#checkoutModal').modal('hide'); // Hide checkout modal
+        $('#receiptModal').modal('show'); // Show receipt modal
+    });
 });
+
 
 // Function to show only products with the selected category
 function filterProducts(category) {
