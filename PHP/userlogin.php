@@ -1,30 +1,27 @@
 <?php
+
 include 'DBconn.php';
-if (isset($_POST['submit'])) {
-  $uname = $_POST['uname'];
+if(isset($_POST['submit'])&& isset($_FILES['image'])){
   $email = $_POST['email'];
-  $mobile = $_POST['mobile'];
-  $password = $_POST['password'];
-  $image= $_FILES['image']['name'];
-  $tmp_name= $_FILES['image']['tmp_name'];
+  $fname = $_POST['fname'];
+  $lname = $_POST['lname'];
+  $mobile =$_POST['mobile'];
+  $address =$_POST['address'];
+  $password =$_POST['password'];
+  $image = $_FILES['image']['name'];
+  $tmp_name = $_FILES['image']['tmp_name'];
   $folder = 'profileimg/'.$image;
-
-
-    $sql = "INSERT INTO `useracc` (uname,email,mobile,password,image) values ('$uname','$email','$mobile','$password','$image') ";
-    $result = mysqli_query($con, $sql);
-    if(move_uploaded_file($tmp_name,$folder)){
-      echo "<h2>Successfully Registered</h2>";
-    }else{
-      die(mysqli_error($con));
-    }
   
+  $sql = mysqli_query($con,"INSERT INTO `useracc`(email,fname,lname,mobile,address,password,image) values ('$email','$fname','$lname','$mobile','$address','$password','$image')");
+  if(move_uploaded_file($tmp_name,$folder)){
+    echo "<h2>Successfully Registered</h2>";
+  }else{
+    die(mysqli_error($con));
   }
-  
- 
+
+}
+
 ?>
-
-
-
 
 
 
@@ -43,7 +40,7 @@ if (isset($_POST['submit'])) {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="../CSS/login.css">
+  <link rel="stylesheet" href="../CSS/1login.css">
   <title>H%S - LOGIN FORM</title>
 </head>
 
@@ -51,11 +48,12 @@ if (isset($_POST['submit'])) {
   <div class="acc-container" id="container">
     <div class="form-container sign-up">
       <form method="post" action="" enctype="multipart/form-data">
-
         <h1>REGISTER</h1>
-        <input type="text" placeholder="Enter Username" name="uname">
-        <input type="text" placeholder="Enter Email" name="email">
+        <input type="email" placeholder="Enter Email" name="email">
+        <input type="text" placeholder="Enter Firstname" name="fname">
+        <input type="text" placeholder="Enter Lastname" name="lname">
         <input type="text" placeholder="Enter Mobile No." name="mobile">
+        <input type="text" placeholder="Enter Address" name="address">       
         <input type="password" placeholder="Enter Password" name="password">
         <input type="file" name="image" id="file">
 
@@ -65,16 +63,16 @@ if (isset($_POST['submit'])) {
 
 
     <div class="form-container sign-in">
-      <form action="UserDB.php" method="post">
+      <form action="UserDB.php" method="post" >
         <?php if (isset($_GET['error'])) { ?>
           <p class="error"><?php echo $_GET['error']; ?></p>
         <?php } ?>
         <h1>SIGN IN</h1>
-        <input type="text" placeholder="Enter Username" name="uname">
+        <input type="email" placeholder="Enter Email" name="email">
         <input type="password" placeholder="Enter Password" name="password">
         <button type="submit" class="btn-1">LOGIN</button>
         <h3>OR</h3>
-        <a href="#" class="btn-3">GO BACK</a>
+        <a href="../index.php" class="btn-3">GO BACK</a>
         <a href="#">Forgot Password?</a>
       </form>
     </div>

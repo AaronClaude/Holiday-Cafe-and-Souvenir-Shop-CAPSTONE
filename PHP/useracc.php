@@ -19,14 +19,17 @@ if(!$con){
                 </div>
 
     <table class="table">
-                <thead>
+    <thead>
                     <tr>
-                    
+                    <th scope="col">Profile Picture</th>
                     <th scope="col">No.</th>
-                    <th scope="col">Username</th>
                     <th scope="col">Email</th>
-                    <th scope="col">Mobile</th>
-                    <th scope="col">Profile</th>
+                    <th scope="col">Firstname</th>
+                    <th scope="col">Lastname</th>
+                    <th scope="col">Mobile No.</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Password</th>
+                    <th scope="col">Update</th>
                     <th scope="col">Delete</th>
                     </tr>
                 </thead>
@@ -37,27 +40,37 @@ if(!$con){
                             if($result){
                                 while($row=mysqli_fetch_assoc($result)){
                                     
-                                    $id = $row['id'];
-                                    $uname= $row['uname'];
-                                    $email = $row['email'];
-                                    $mobile = $row['mobile'];
-                                    $password = $row['password'];
                                     $image = $row['image'];
+                                    $id = $row['id'];
+                                    $email = $row['email'];
+                                    $fname = $row['fname'];
+                                    $lname = $row['lname'];
+                                    $mobile = $row['mobile'];
+                                    $address = $row['address'];
+                                    $password = $row['password'];
                                    
 
 
                         echo
                         '<tr>
                        
-                        <td> '.$id.' </td>
-                        <td> '.$uname.' </td>
-                        <td> '.$email.' </td>
-                        <td> '.$mobile.' </td>
-                        <td> '.$password.' </td>
                         <td>
                             <img src="profileimg/'.$image.'" />
+
                         </td>
-                       
+                      
+                        <td> '.$id.' </td>
+                        <td> '.$email.' </td>
+                        <td> '.$fname.' </td>
+                        <td> '.$lname.' </td>
+                        <td> '.$mobile.' </td>
+                        <td> '.$address.' </td>
+                        <td> '.$password.' </td>
+                        <td>
+                        <button class="button"> 
+                                <a href="adminupdate.php? updateid='.$id.' ">Update</a>
+                            </button>
+                        </td>
                         <td>
                             <button class="button"> 
                                 <a href="useraccdelete.php? deleteid='.$id.'">Delete</a>

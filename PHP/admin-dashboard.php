@@ -128,7 +128,7 @@ if (isset ($_SESSION ['email'] ) && isset ($_SESSION ['password'])){
             <div class="second-content">
                 <div class="card-2">
                     <i class='bx bxs-user-pin'></i><br>
-                    <a href="#">Customer Profiles</a>
+                    <a href="useracc.php">Customer Profiles</a>
                 </div>
                 <div class="card-2">
                     <i class='bx bx-cart-add' ></i><br>
@@ -136,7 +136,7 @@ if (isset ($_SESSION ['email'] ) && isset ($_SESSION ['password'])){
                 </div>
                 <div class="card-2">
                     <i class='bx bxs-user-circle'></i><br>
-                    <a href="#">Admin Profiles</a>
+                    <a href="adminacc.php">Admin Profiles</a>
                 </div>
                 <div class="card-2">
                     <i class='bx bx-history' ></i><br>
@@ -153,7 +153,7 @@ if (isset ($_SESSION ['email'] ) && isset ($_SESSION ['password'])){
 
                     <div class="admin-profile-container">
                         <h2>ADMIN PROFILE</h2>
-                        <img src="profileimg/<?php echo $image; ?>" alt="profile icon">
+                        <img src="profileimg/<?php echo $image;?>" alt="profile icon">
                     </div>
                     
                 <table>

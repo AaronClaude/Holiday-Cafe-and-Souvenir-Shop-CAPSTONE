@@ -72,7 +72,7 @@ if(isset($_POST['submit'])&& isset($_FILES['image'])){
         <input type="password" placeholder="Enter Password" name="password">
         <button type="submit" class="btn-1">LOGIN</button>
         <h3>OR</h3>
-        <a href="#" class="btn-3">GO BACK</a>
+        <a href="../index.php" class="btn-3">GO BACK</a>
         <a href="#">Forgot Password?</a>
       </form>
     </div>
