@@ -7,21 +7,27 @@ document.addEventListener('DOMContentLoaded', function () {
     const clearCartBtn = document.querySelector('.clear-cart');
     const checkoutBtn = document.querySelector('.checkout');
     const cartSidebar = document.getElementById('cartSidebar');
-    const receiptContent = document.getElementById('receiptContent');
     const checkoutForm = document.getElementById('checkoutForm');
+    const paymentMethodDisplay = document.getElementById('paymentMethodDisplay');
 
     let cartItems = [];
+    let paymentMethod = '';
 
     addToCartButtons.forEach(button => {
         button.addEventListener('click', function () {
             const price = parseFloat(button.getAttribute('data-price'));
             const name = button.parentElement.querySelector('.card-title').textContent;
-            const item = {
-                name: name,
-                price: price
-            };
 
-            cartItems.push(item);
+            // Check if item already exists in cart
+            const existingItem = cartItems.find(item => item.name === name);
+            if (existingItem) {
+                // If item already exists, increase quantity instead of adding a duplicate
+                existingItem.quantity++;
+            } else {
+                // If item does not exist, add it to cart with quantity 1
+                cartItems.push({ name: name, price: price, quantity: 1 });
+            }
+
             updateCart();
             generateReceipt();
         });
@@ -34,9 +40,9 @@ document.addEventListener('DOMContentLoaded', function () {
         cartItems.forEach(item => {
             const listItem = document.createElement('li');
             listItem.classList.add('list-group-item');
-            listItem.textContent = `${item.name} - ₱${item.price}`;
+            listItem.textContent = `${item.name} x ${item.quantity} - ₱${item.price * item.quantity}`;
             cartList.appendChild(listItem);
-            total += item.price;
+            total += item.price * item.quantity;
         });
 
         cartTotal.textContent = total.toFixed(2);
@@ -61,7 +67,6 @@ document.addEventListener('DOMContentLoaded', function () {
         if (totalPrice === 0) {
             alert('Your cart is empty. Please add some items before checkout.');
         } else {
-            generateReceipt();
             // Display checkout modal
             $('#checkoutModal').modal('show');
         }
@@ -70,8 +75,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // Function to generate receipt content
     function generateReceipt() {
         const customerName = document.getElementById('name').value;
-        document.getElementById('customerName').textContent = customerName;
-
         const receiptProductList = document.getElementById('receiptProductList');
         receiptProductList.innerHTML = '';
 
@@ -80,36 +83,21 @@ document.addEventListener('DOMContentLoaded', function () {
         cartItems.forEach(item => {
             const receiptItem = document.createElement('li');
             receiptItem.classList.add('list-group-item');
-            receiptItem.textContent = `${item.name} - ₱${item.price}`;
+            receiptItem.textContent = `${item.name} x ${item.quantity} - ₱${item.price * item.quantity}`;
             receiptProductList.appendChild(receiptItem);
-            totalPrice += item.price;
+            totalPrice += item.price * item.quantity;
         });
 
+        document.getElementById('customerName').textContent = customerName;
         document.getElementById('totalPrice').textContent = `₱${totalPrice.toFixed(2)}`;
+        paymentMethodDisplay.textContent = `Payment Method: ${paymentMethod}`;
     }
-
 
     checkoutForm.addEventListener('submit', function (event) {
         event.preventDefault();
 
         // You can customize this part to send the form data to your server for processing
-
-        const formData = new FormData(checkoutForm);
-        const name = formData.get('name');
-        const email = formData.get('email');
-        const address = formData.get('address');
-
-        // Example: Sending data via fetch API
-        // fetch('/checkout', {
-        //     method: 'POST',
-        //     body: formData
-        // }).then(response => {
-        //     if (response.ok) {
-        //         // Handle successful response
-        //     } else {
-        //         // Handle error response
-        //     }
-        // });
+        paymentMethod = checkoutForm.elements['paymentMethod'].value;
 
         // Display receipt modal and generate receipt
         $('#checkoutModal').modal('hide'); // Hide checkout modal
@@ -117,6 +105,9 @@ document.addEventListener('DOMContentLoaded', function () {
         generateReceipt(); // Generate receipt content
     });
 });
+
+
+
 
 
 

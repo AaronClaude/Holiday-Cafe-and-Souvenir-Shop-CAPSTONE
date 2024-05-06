@@ -265,33 +265,40 @@
 
 <!-- Receipt Modal -->
 <div class="modal fade" id="receiptModal" tabindex="-1" aria-labelledby="receiptModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="receiptModalLabel">Receipt</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <!-- Receipt content -->
-          <div class="receipt-header">
-            <h4>Receipt</h4>
-            <p id="customerName" class="text-center"></p>
+          <div class="modal-header">
+              <h5 class="modal-title" id="receiptModalLabel">Receipt</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <hr>
-          <ul class="list-group mb-3" id="receiptProductList">
-            <!-- Products will be appended here -->
-          </ul>
-          <hr>
-          <div class="receipt-footer">
-            <p class="total">Total: <span id="totalPrice"></span></p>
+          <div class="modal-body">
+              <!-- Receipt content -->
+              <div class="row">
+                  <div class="col-6">
+                      <div class="receipt-header">
+                          <h4>Receipt</h4>
+                          <p>Customer: <span id="customerName"></span></p>
+                          <p>Payment Method: <span id="paymentMethod"></span></p>
+                      </div>
+                  </div>
+                  <div class="col-6">
+                      <ul class="list-group mb-3" id="receiptProductList">
+                          <!-- Products will be appended here -->
+                      </ul>
+                  </div>
+              </div>
+              <hr>
+              <div class="receipt-footer">
+                  <p class="total">Total: <span id="totalPrice"></span></p>
+              </div>
           </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-        </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+          </div>
       </div>
-    </div>
   </div>
+</div>
+
   
 
   
