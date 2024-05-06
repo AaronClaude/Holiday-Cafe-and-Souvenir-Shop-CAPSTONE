@@ -44,7 +44,7 @@ if (isset ($_SESSION ['email'] ) && isset ($_SESSION ['password'])){
      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <link rel="stylesheet" href="../CSS/dashboard-admin.css">
-    <title>ADMIN DASHBOARD</title>
+    <title>POS - DASHBOARD</title>
 </head>
 <body>
     <header>
