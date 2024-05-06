@@ -43,8 +43,8 @@ if (isset ($_SESSION ['email'] ) && isset ($_SESSION ['password'])){
      <!-- Box Icons -->
      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <link rel="stylesheet" href="../CSS/Dashboard.css">
-    <title>POS - DASHBOARD</title>
+    <link rel="stylesheet" href="../CSS/dashboard-admin.css">
+    <title>ADMIN DASHBOARD</title>
 </head>
 <body>
     <header>
@@ -183,26 +183,14 @@ if (isset ($_SESSION ['email'] ) && isset ($_SESSION ['password'])){
             </div>
         </div>
     
-    <section class = "hidden" id="my-graph">
-        <div class="container">
-            
-            
-
-        </div>
+   
 
     </section>
 </body>
+
 <script src="../JS/admin-dashboard.js"></script>
-
-<!-- Chart JS -->
-<script
-src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
-
-</script>
-
 </html>
 
-<!--
 
 <?php
 }else{
@@ -212,4 +200,4 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
 
 ?>
 
--->
+
