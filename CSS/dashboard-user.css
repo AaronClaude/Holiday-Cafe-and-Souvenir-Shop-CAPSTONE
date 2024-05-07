@@ -381,31 +381,31 @@ nav .container a {
 }
 
 
-#cardProducts {
+.cardProducts {
     background-color: #F4F1EC;
     transition: 0.3s ease;
     border: 2px solid #FFEDD2;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-#cardProducts:hover {
+.cardProducts:hover {
     border: 2px solid #733311;
 }
 
-#cardProducts h5 {
+.cardProducts h5 {
     color: #733311;
     font-size: 18px;
     text-align: center;
     font-weight: 700;
 }
 
-#cardProducts p {
+.cardProducts p {
     color: #733311;
     font-size: 18px;
     font-weight: 500;
 }
 
-#cardProducts button {
+.cardProducts button {
     border: 2px solid #733311;
     border-radius: 25px;
     padding: 10px 20px;
@@ -413,7 +413,22 @@ nav .container a {
     color: #FFEDD2;
 }
 
-#cardProducts button:hover {
+.cardProducts .add-to-cart:hover {
+    background-color: transparent;
+    border: 2px solid #733311;
+    color: #733311;
+    transition: 0.3s ease
+}
+
+#submit-btn {
+    border: 2px solid #733311;
+    border-radius: 25px;
+    padding: 10px 20px;
+    background-color: #733311;
+    color: #FFEDD2;
+}
+
+#submit-btn:hover {
     background-color: transparent;
     color: #733311;
     transition: 0.3s ease
