@@ -434,6 +434,20 @@ nav .container a {
     transition: 0.3s ease
 }
 
+#submit-btn {
+    border: 2px solid #733311;
+    border-radius: 25px;
+    padding: 10px 20px;
+    background-color: #733311;
+    color: #FFEDD2;
+}
+
+#submit-btn:hover {
+    background-color: transparent;
+    color: #733311;
+    transition: 0.3s ease
+}
+
 /* Footer styles */
 footer {
     background: #733311;
