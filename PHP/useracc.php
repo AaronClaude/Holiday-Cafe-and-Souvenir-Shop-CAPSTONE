@@ -29,7 +29,7 @@ if(!$con){
                     <th scope="col">Mobile No.</th>
                     <th scope="col">Address</th>
                     <th scope="col">Password</th>
-                    <th scope="col">Update</th>
+            
                     <th scope="col">Delete</th>
                     </tr>
                 </thead>
@@ -66,11 +66,7 @@ if(!$con){
                         <td> '.$mobile.' </td>
                         <td> '.$address.' </td>
                         <td> '.$password.' </td>
-                        <td>
-                        <button class="button"> 
-                                <a href="adminupdate.php? updateid='.$id.' ">Update</a>
-                            </button>
-                        </td>
+                       
                         <td>
                             <button class="button"> 
                                 <a href="useraccdelete.php? deleteid='.$id.'">Delete</a>
