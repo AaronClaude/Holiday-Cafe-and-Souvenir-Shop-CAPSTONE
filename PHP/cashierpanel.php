@@ -28,6 +28,30 @@ if (isset ($_SESSION ['email'] ) && isset ($_SESSION ['password'])){
   
 </head>
 <body>
+
+<section>
+        <nav class="navbar navbar-expand-lg" id="myNavbar">
+            <div class="container">
+                <img src="../IMG/logos/nav-logo.png" alt="">
+                
+                <h1>Holiday Cafe & Souvenir Shop</h1>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" id="navLogout" href="logout.php">Sign out</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+
     <div class="container mt-3">
       <div class="row">
         <div class="col-md-8" id="product-section">

@@ -1,10 +1,105 @@
+* {
+    top: 0;
+    padding: 0;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+
 body {
+    font-family: 'Poppins', sans-serif;
     background-color: #FFEDD2;
-    font-family: 'Poppins',sans-serif;
+}
+
+section {
+    padding: 25px 0;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+nav {
+    height: 75px;
+}
+nav .container img {
+    width: 55px; 
+    height: auto;
+    margin-right: 20px;
+    margin-left: -60px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease;
+}
+
+nav .container img:hover {
+    transform: scale(1.1);
+}
+
+nav h1 {
+    font-size: 18px;
+    font-weight: 500;
+    justify-content: left;
+    margin-right: 11rem;
+    padding-top: 5px;
   }
+
+nav .container a {
+    color: #733311;
+    font-size: 17px;
+    margin-top: 5px;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+/* Navbar styles */
+.navbar-brand {
+    font-weight: 500;
+}
+
+#homeLink {
+    margin-left: 10px;
+    margin-right: 15px;
+}
+#myNavbar {
+    background-color: #FFEDD2;
+    padding: 20px 20px;
+    transition: top 0.3s; 
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid #733311;
+}
+
+#myNavbar .container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#myNavbar #navLogout {
+    border: 2px solid #FF6868;
+    border-radius: 25px;
+    padding: 10px 20px;
+    color: #FF6868;
+    margin-right: -30px;
+    margin-left: 20px;
+}
+
+#myNavbar #navLogout:hover {
+    background-color: #FF6868;
+    color: #f2f2f2;
+    transition: 0.5s ease
+
+}
+
   #product-section {
     max-height: 300px;
-    margin-top: 20px;
+    margin-top: 50px;
+  
   }
   
   .product-cards {
@@ -49,7 +144,7 @@ body {
     font-size: 16px;
   }
   #cart-section {
-    margin-top: 20px;
+    margin-top: 50px;
     background-color: #F4F1EC;
     padding: 20px;
     border: 2px solid #733311;
