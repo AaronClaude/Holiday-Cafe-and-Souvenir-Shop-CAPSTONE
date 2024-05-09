@@ -24,7 +24,7 @@ if (isset ($_SESSION ['email'] ) && isset ($_SESSION ['password'])){
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="../CSS/dashboard-cashier.css">
+  <link rel="stylesheet" href="../CSS/Dashboard-cashier.css">
   
 </head>
 <body>
@@ -140,10 +140,10 @@ if (isset ($_SESSION ['email'] ) && isset ($_SESSION ['password'])){
   </div>
 
   <!-- Alert container -->
-  <div id="alert-container" class="position-fixed bottom-0 end-0 p-3" style="z-index: 11"></div>
+  <div id="alert-container" class="position-fixed bottom-0 end-0 p-3" style="z-index: 1000"></div>
   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../JS/dashboard-cashier.js"></script>
+    <script src="../JS/Dashboard-cashier.js"></script>
   </body>
 </html>
 

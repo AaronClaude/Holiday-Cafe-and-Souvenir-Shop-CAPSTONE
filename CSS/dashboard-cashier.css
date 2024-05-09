@@ -1,6 +1,6 @@
 * {
-    top: 0;
-    padding: 0;
+   
+   padding: 0;
     margin: 0;
 }
 html {
@@ -13,6 +13,7 @@ body {
 }
 
 section {
+  
     padding: 25px 0;
 }
 
@@ -22,6 +23,7 @@ section {
 
 nav {
     height: 75px;
+    top: 0;
 }
 nav .container img {
     width: 55px; 
@@ -219,4 +221,9 @@ nav .container a {
   
   #calculation-total {
     color: #733311;
+  }
+  #alert-container{
+    position: fixed;
+    bottom: 0;
+    padding: 3rem;
   }
