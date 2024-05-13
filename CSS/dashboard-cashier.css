@@ -225,5 +225,39 @@ nav .container a {
   #alert-container{
     position: fixed;
     bottom: 0;
+    margin-bottom: 12rem;
     padding: 3rem;
   }
+
+#gcashModal .modal-content {
+    border: 2px solid #733311;
+    background-color: #FFEDD2;
+    color: #733311;
+}
+
+#gcashModal .modal-content .modal-header {
+    border-bottom: 1px solid #733311;
+}
+
+#paymayaModal .modal-content {
+    border: 2px solid #733311;
+    background-color: #FFEDD2;
+    color: #733311;
+}
+
+#paymayaModal .modal-content .modal-header {
+    border-bottom: 1px solid #733311;
+}
+
+.formBtn {
+    background-color: #FFEDD2;
+    color: #733311;
+    border: 2px solid #733311;
+    border-radius: 25px;
+}
+
+.formBtn:hover {
+    background-color: #733311;
+    color: #FFEDD2;
+    border: 2px solid #733311;
+}

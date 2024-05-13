@@ -139,7 +139,7 @@ if (isset ($_SESSION ['email'] ) && isset ($_SESSION ['password'])){
             
       
         <div class="productList">
-            <a href="dashboard-user.html"><h1>All Products</h1></a>
+            <a href="userhome.php"><h1>All Products</h1></a>
         </div>
 
         <div class="row" id="myProducts">
@@ -822,103 +822,105 @@ if (isset ($_SESSION ['email'] ) && isset ($_SESSION ['password'])){
 </section>
 
 
-    <div class="cart-sidebar" id="cartSidebar">
-        <div class="card">
-            <div class="card-header d-flex justify-content-between"> <!-- Adjusted class and added flex utility classes -->
-                <span><i class="bi bi-cart-fill"></i> Shopping Cart</span> <!-- Moved text inside span for better styling -->
-                <button type="button" class="btn-close btn-close-black" aria-label="Close" id="closeCartBtn"></button> <!-- Added close button -->
-            </div>
-            
-            <div class="card-body">
-                <ul class="list-group cart-list">
-                    <!-- Cart items will be appended here -->
-                </ul>
-            </div>
-            <div class="card-footer">
-                <p id="total-price">Total: ₱<span id="cart-total">0</span></p>
-            </div>
-            <div class="card-footer">
-                <button class="btn btn-danger clear-cart" id="clearBtn">Clear</button>
-                <button class="btn btn-primary checkout" id="checkoutBtn">Checkout</button>
-            </div>
+<div class="cart-sidebar" id="cartSidebar">
+    <div class="card">
+        <div class="card-header d-flex justify-content-between"> 
+            <span><i class="bi bi-cart-fill"></i> Shopping Cart</span> 
+            <button type="button" class="btn-close btn-close-black" aria-label="Close" id="closeCartBtn"></button> <
+        </div>
+        
+        <div class="card-body">
+            <ul class="list-group cart-list">
+                <!-- Cart items will appear here -->
+            </ul>
+        </div>
+        <div class="card-footer">
+            <p id="total-price">Total: ₱<span id="cart-total">0</span></p>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-danger clear-cart" id="clearBtn">Clear</button>
+            <button class="btn btn-primary checkout" id="checkoutBtn">Checkout</button>
         </div>
     </div>
+</div>
+
     
 
   <!-- Checkout Modal -->
 <div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="checkoutModalLabel">Checkout</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="checkoutModalLabel">Checkout</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Checkout form -->
+                <form id="checkoutForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="address" class="form-label">Address</label>
+                        <textarea class="form-control" id="address" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="paymentMethod" class="form-label">Payment Method</label>
+                        <select class="form-select" id="paymentMethod" required>
+                            <option value="" selected disabled>Select Payment Method</option>
+                            <option value="cod">Cash on Delivery</option>
+                            <option value="gcash">G-Cash</option>
+                            <option value="paymaya">PayMaya</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary formBtn">Submit</button>
+                </form>
+            </div>
         </div>
-        <div class="modal-body">
-          <!-- Checkout form -->
-          <form id="checkoutForm">
-            <div class="mb-3">
-              <label for="name" class="form-label">Name</label>
-              <input type="text" class="form-control" id="name" required>
-            </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" required>
-            </div>
-            <div class="mb-3">
-              <label for="address" class="form-label">Address</label>
-              <textarea class="form-control" id="address" required></textarea>
-            </div>
-            <div class="mb-3">
-              <label for="paymentMethod" class="form-label">Payment Method</label>
-              <select class="form-select" id="paymentMethod" required>
-                <option value="" selected disabled>Select Payment Method</option>
-                <option value="cash">Cash</option>
-                <option value="gcash">G Cash</option>
-              </select>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-        </div>
-      </div>
     </div>
-  </div>
-
-  
+</div>
 
 <!-- Receipt Modal -->
 <div class="modal fade" id="receiptModal" tabindex="-1" aria-labelledby="receiptModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content">
-          <div class="modal-header">
-              <h5 class="modal-title" id="receiptModalLabel">Receipt</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-              <!-- Receipt content -->
-              <div class="row">
-                  <div class="col-6">
-                      <div class="receipt-header">
-                          <h4>Receipt</h4>
-                          <p>Customer: <span id="customerName"></span></p>
-                          <p>Payment Method: <span id="paymentMethod"></span></p>
-                      </div>
-                  </div>
-                  <div class="col-6">
-                      <ul class="list-group mb-3" id="receiptProductList">
-                          <!-- Products will be appended here -->
-                      </ul>
-                  </div>
-              </div>
-              <hr>
-              <div class="receipt-footer">
-                  <p class="total">Total: <span id="totalPrice"></span></p>
-              </div>
-          </div>
-          <div class="modal-footer">
-              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-          </div>
-      </div>
-  </div>
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="receiptModalLabel">Summary of Payment</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Receipt content -->
+                <div class="row">
+                    <div class="col-6">
+                        <div class="receipt-header">
+                            <h5>Customer Details</h5>
+                            <p><b>Customer: </b><span id="customerName"></span></p>
+                            <p><b>Email: </b><span id="customerEmail"></span></p>
+                            <p><b>Address: </b><span id="customerAddress"></span></p>
+                            <p><b>Payment Method: </b><span id="paymentMethod"></span></p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <ul class="list-group mb-3" id="receiptProductList">
+                            <!-- Products will appear here -->
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <div class="receipt-footer">
+                    <h3 class="total">Total: <span id="totalPrice"></span></h3>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary formBtn" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
 </div>
 
   

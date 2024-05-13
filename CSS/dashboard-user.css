@@ -267,9 +267,11 @@ nav .container a {
 #total-price {
     font-weight: bold;
 }
+
 /* Cart list styles */
 .cart-list {
     max-height: 350px; 
+    padding: 0;
     overflow-y: scroll; 
 }
 
@@ -289,6 +291,42 @@ nav .container a {
 
 .cart-list::-webkit-scrollbar-thumb:hover {
     background: #555; 
+}
+
+.cart-list .sample-cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+    display: flex;
+    align-items: center; 
+}
+
+.cart-item-controls {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+.cart-item-quantity {
+    width: 50px;
+    margin-left: 135px;
+    margin-right: 10px; 
+}
+
+.cart-item-name {
+    color: #733311;
+    font-weight: bold;
+    margin-right: 10px; 
+}
+
+.cart-item-price {
+    color: #733311; 
+    margin-right: 10px; 
 }
 
 /* Custom styles for the close button */
@@ -446,6 +484,40 @@ nav .container a {
     background-color: transparent;
     color: #733311;
     transition: 0.3s ease
+}
+
+/* Checkout form and Receipt form */
+#checkoutModal .modal-content {
+    border: 2px solid #733311;
+    background-color: #FFEDD2;
+    color: #733311;
+}
+
+#checkoutModal .modal-content .modal-header {
+    border-bottom: 1px solid #733311;
+}
+
+#receiptModal .modal-content {
+    border: 2px solid #733311;
+    background-color: #FFEDD2;
+    color: #733311;
+}
+
+#receiptModal .modal-content .modal-header {
+    border-bottom: 1px solid #733311;
+}
+
+.formBtn {
+    background-color: #FFEDD2;
+    color: #733311;
+    border: 2px solid #733311;
+    border-radius: 25px;
+}
+
+.formBtn:hover {
+    background-color: #733311;
+    color: #FFEDD2;
+    border: 2px solid #733311;
 }
 
 /* Footer styles */

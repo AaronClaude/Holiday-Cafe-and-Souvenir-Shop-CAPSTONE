@@ -124,13 +124,13 @@ const products = [
         const cartItem = document.createElement('div');
         cartItem.classList.add('cart-item', 'mb-2');
         cartItem.innerHTML = `
-  <div>${item.name}</div>
-  <div>&#8369;${item.price.toFixed(2)}</div>
-  <div>
-  <input type="number" min="1" value="${item.quantity}" class="quantity-input"><p>Qty.</p>
-  <button class="btn btn-danger btn-sm remove-from-cart-btn remove-btn" data-name="${item.name}">Remove</button>
-  </div>
-  `;
+        <div>${item.name}</div>
+        <div>&#8369;${item.price.toFixed(2)}</div>
+        <div>
+        <input type="number" min="1" value="${item.quantity}" class="quantity-input"><p>Qty.</p>
+        <button class="btn btn-danger btn-sm remove-from-cart-btn remove-btn" data-name="${item.name}">Remove</button>
+        </div>
+        `;
         cartContainer.appendChild(cartItem);
     });
   }
@@ -141,14 +141,19 @@ const products = [
     cart.forEach(item => {
         subtotal += item.price * item.quantity;
     });
-  
+
     const discount = 0; // You can implement discount logic here
     const grandTotal = subtotal - (subtotal * discount / 100);
-  
+
+    const tenderedAmount = parseFloat(document.getElementById('tendered').value);
+    const change = tenderedAmount >= grandTotal ? (tenderedAmount - grandTotal).toFixed(2) : 0;
+
     document.getElementById('subtotal').textContent = `${subtotal.toFixed(2)}`;
     document.getElementById('discount').textContent = `${discount}%`;
     document.getElementById('grand-total').textContent = `${grandTotal.toFixed(2)}`;
-  }
+    document.getElementById('change').textContent = `${change}`;
+}
+
   
   // Function to add item to cart
   function addToCart(name, price) {
@@ -167,16 +172,17 @@ const products = [
   function generateNumpad() {
     const numpadContainer = document.querySelector('.numpad');
     const buttons = [
-        '1', '2', '3', '4', '5', '6', '7', '8', '9', '.', '0', '00'
+        '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '00', '50', '100', '500', '1000', 'Clear'
     ];
-  
+
     buttons.forEach(button => {
         const btn = document.createElement('button');
         btn.classList.add('btn', 'btn-secondary', 'mx-1', 'my-1', 'numpad-btn');
         btn.textContent = button;
         numpadContainer.appendChild(btn);
     });
-  }
+}
+
   
   // Event listener for remove from cart button clicks
   document.addEventListener('click', function (event) {
@@ -204,7 +210,7 @@ const products = [
     }
   });
   
-  // Event listener for numpad button clicks and complete sale button click
+  
   document.addEventListener('click', function (event) {
     if (event.target.classList.contains('numpad-btn')) {
         const value = event.target.textContent;
@@ -214,32 +220,34 @@ const products = [
         }
         tenderedInput.value += value;
     }
-  
+
     if (event.target.id === 'complete-sale-btn') {
         const tenderedAmount = parseFloat(document.getElementById('tendered').value);
         const subtotal = parseFloat(document.getElementById('subtotal').textContent);
-  
+
         if (tenderedAmount >= subtotal) {
             const change = tenderedAmount - subtotal;
-            showAlert('success', `Sale completed! Change: ₱${change.toFixed(2)}`);
+            showAlert('success', `Payment received! Change: ₱${change.toFixed(2)}`);
+            document.getElementById('cashChange').textContent = `${change.toFixed(2)}`; 
             // Reset cart and input fields
             cart = [];
             document.querySelector('.add-to-cart').innerHTML = '';
             document.getElementById('tendered').value = '';
             calculateTotal(); // Reset total
         } else {
-            showAlert('danger', 'Insufficient Rendered amount.');
+            showAlert('danger', `Insufficient payment amount.`);
         }
     }
-  
+
     // Handle "Received Payment" button click
     if (event.target.id === 'received-payment-btn') {
         const tenderedAmount = parseFloat(document.getElementById('tendered').value);
         const subtotal = parseFloat(document.getElementById('subtotal').textContent);
-  
+
         if (tenderedAmount >= subtotal) {
             const change = tenderedAmount - subtotal;
             showAlert('success', `Payment received! Change: ₱${change.toFixed(2)}`);
+            document.getElementById('cashChange').textContent = `${change.toFixed(2)}`;
             // Reset cart and input fields
             cart = [];
             document.querySelector('.add-to-cart').innerHTML = '';
@@ -249,14 +257,15 @@ const products = [
             showAlert('danger', 'Insufficient payment amount.');
         }
     }
-  
+
     // Event listener for clear cart button click
     if (event.target.id === 'clear-cart-btn') {
         // Show confirmation modal for clearing cart
         const clearCartModal = new bootstrap.Modal(document.getElementById('clearCartModal'));
         clearCartModal.show();
     }
-  });
+});
+
   
   // Event listener for confirmation to clear cart
   document.getElementById('confirm-clear-cart-btn').addEventListener('click', function () {
@@ -264,6 +273,7 @@ const products = [
     cart = [];
     document.querySelector('.add-to-cart').innerHTML = '';
     document.getElementById('tendered').value = '';
+    document.getElementById('cashChange').textContent = '0.00';
     calculateTotal();
   });
   
@@ -300,7 +310,7 @@ const products = [
     alertContainer.appendChild(alertDiv);
     setTimeout(() => {
         alertDiv.remove();
-    }, 3000);
+    }, 7000);
   }
   
   // Call initial functions

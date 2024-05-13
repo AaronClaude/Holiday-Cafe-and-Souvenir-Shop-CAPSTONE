@@ -66,13 +66,14 @@ if (isset ($_SESSION ['email'] ) && isset ($_SESSION ['password'])){
             <!-- Add to cart section will be dynamically updated here -->
             
           </div>
-          <button class="btn btn-danger btn-lg mt-2" id="clear-cart-btn">Clear Cart</button>
+          <button class="btn btn-danger btn-lg mt-2" id="clear-cart-btn">Clear All</button>
           <div class="total mt-4" id="calculation-total">
             <h5>Total:</h5>
             <p>Subtotal: &#8369; <span id="subtotal">0.00</span></p>
             <p>Discount: <span id="discount">0%</span></p>
             <p>Tendered Amount: &#8369;<input type="number" id="tendered" step="0.01"></p>
             <p>Grand Total: &#8369; <span id="grand-total">0.00</span></p>
+            <p>Change: &#8369; <span id="cashChange">0.00</span></p>
             <button class="btn btn-secondary btn-lg mt-1" id="complete-sale-btn">Cash</button>
             <button class="btn btn-primary btn-lg mt-1" id="gcash-btn" data-bs-toggle="modal" data-bs-target="#gcashModal">G-Cash</button>
             <button class="btn btn-success btn-lg mt-1" id="paymaya-btn" data-bs-toggle="modal" data-bs-target="#paymayaModal">PayMaya</button>
@@ -113,11 +114,11 @@ if (isset ($_SESSION ['email'] ) && isset ($_SESSION ['password'])){
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="gcashModalLabel">G-cash Payment</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close formBtn" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <img src="../IMG/gcash-qr.jpg" alt="G-cash QR Code Placeholder" class="img-fluid mb-3">
-          <button class="btn btn-primary btn-lg mt-1" id="received-payment-btn">Received Payment</button>
+          <button class="btn btn-primary btn-lg mt-1 formBtn" id="received-payment-btn">Received Payment</button>
         </div>
       </div>
     </div>
@@ -129,11 +130,11 @@ if (isset ($_SESSION ['email'] ) && isset ($_SESSION ['password'])){
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="paymayaModalLabel">PayMaya Payment</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close formBtn" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <img src="../IMG/paymaya-qr.jpg" alt="PayMaya QR Code Placeholder" class="img-fluid mb-3">
-          <button class="btn btn-primary btn-lg mt-1" id="received-payment-btn">Received Payment</button>
+          <button class="btn btn-primary btn-lg mt-1 formBtn" id="received-payment-btn">Received Payment</button>
         </div>
       </div>
     </div>
