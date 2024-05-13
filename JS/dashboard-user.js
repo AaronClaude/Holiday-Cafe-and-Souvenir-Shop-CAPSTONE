@@ -121,6 +121,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const customerName = document.getElementById('name').value;
         const customerEmail = document.getElementById('email').value;
         const customerAddress = document.getElementById('address').value;
+        const paymentMethod = document.getElementById('paymentMethod').value;
         const receiptProductList = document.getElementById('receiptProductList');
 
         receiptProductList.innerHTML = '';

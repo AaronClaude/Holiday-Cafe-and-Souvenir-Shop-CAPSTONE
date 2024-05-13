@@ -53,11 +53,11 @@ if (isset ($_SESSION ['email'] ) && isset ($_SESSION ['password'])){
                     <ul class="navbar-nav ms-auto">
                         
                         <li class="nav-item">
-                            <a class="nav-link active"  href="dashboard-user.html">Products</a>
+                            <a class="nav-link active"  href="userhome.php">Products</a>
                         </li>
                         
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" id="homeLink" href="index.html">Home</a>
+                            <a class="nav-link" aria-current="page" id="homeLink" href="userhome.php">Home</a>
                         </li>
 
                         <button class="btn btn-primary ms-3" id="openCartBtn">

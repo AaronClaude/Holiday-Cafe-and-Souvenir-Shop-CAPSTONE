@@ -101,12 +101,12 @@ const products = [
             const card = document.createElement('div');
             card.classList.add('card', 'mb-3');
             card.innerHTML = `
-  <!-- Image placeholder -->
-  <div class="card-body">
-    <h5 class="card-title">${product.name}</h5>
-    <p class="card-text">&#8369; ${product.price.toFixed(2)}</p>
-  </div>
-  `;
+            <!-- Image placeholder -->
+            <div class="card-body">
+              <h5 class="card-title">${product.name}</h5>
+              <p class="card-text">&#8369; ${product.price.toFixed(2)}</p>
+            </div>
+            `;
             card.addEventListener('click', function () {
                 addToCart(product.name, product.price);
             });
@@ -127,22 +127,23 @@ const products = [
         <div>${item.name}</div>
         <div>&#8369;${item.price.toFixed(2)}</div>
         <div>
-        <input type="number" min="1" value="${item.quantity}" class="quantity-input"><p>Qty.</p>
-        <button class="btn btn-danger btn-sm remove-from-cart-btn remove-btn" data-name="${item.name}">Remove</button>
+        ${item.quantity} Qty.
+        <button class="btn btn-danger btn-sm remove-from-cart-btn remove-btn" data-name="${item.name}">X</button>
         </div>
         `;
         cartContainer.appendChild(cartItem);
     });
   }
-  
+  //<input type="number" min="1" value="${item.quantity}" class="quantity-input">
   // Function to calculate total
   function calculateTotal() {
     let subtotal = 0;
+    
     cart.forEach(item => {
         subtotal += item.price * item.quantity;
     });
 
-    const discount = 0; // You can implement discount logic here
+    const discount = 0; 
     const grandTotal = subtotal - (subtotal * discount / 100);
 
     const tenderedAmount = parseFloat(document.getElementById('tendered').value);
@@ -216,7 +217,7 @@ const products = [
         const value = event.target.textContent;
         const tenderedInput = document.getElementById('tendered');
         if (value === '.' && tenderedInput.value.includes('.')) {
-            return; // Prevent adding multiple decimal points
+            return; 
         }
         tenderedInput.value += value;
     }

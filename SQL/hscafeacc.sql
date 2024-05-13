@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Apr 13, 2024 at 10:04 PM
+-- Generation Time: May 06, 2024 at 06:18 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -28,19 +28,22 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `admin` (
-  `id` int(255) NOT NULL,
   `empid` int(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `mobile` int(255) NOT NULL,
-  `password` varchar(100) NOT NULL
+  `fname` varchar(255) NOT NULL,
+  `lname` varchar(255) NOT NULL,
+  `mobile` varchar(11) NOT NULL,
+  `address` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `admin`
 --
 
-INSERT INTO `admin` (`id`, `empid`, `email`, `mobile`, `password`) VALUES
-(1, 330410, 'phanyvic@gmail.com', 2147483647, 'rxeguno1103');
+INSERT INTO `admin` (`empid`, `email`, `fname`, `lname`, `mobile`, `address`, `password`, `image`) VALUES
+(1, 'phanyvic@gmail.com', 'Rexson', 'Guno', '09616198258', 'Naval Compound, Philec RD. Brgy.Dolores Tikling Taytay Rizal', 'qwer', '1x1 pix rxsn.png');
 
 -- --------------------------------------------------------
 
@@ -49,19 +52,46 @@ INSERT INTO `admin` (`id`, `empid`, `email`, `mobile`, `password`) VALUES
 --
 
 CREATE TABLE `cashier` (
-  `id` int(255) NOT NULL,
   `empid` int(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `mobile` int(255) NOT NULL,
-  `password` varchar(100) NOT NULL
+  `fname` varchar(255) NOT NULL,
+  `lname` varchar(255) NOT NULL,
+  `mobile` varchar(11) NOT NULL,
+  `address` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `cashier`
 --
 
-INSERT INTO `cashier` (`id`, `empid`, `email`, `mobile`, `password`) VALUES
-(1, 330410, 'phanyvic@gmail.com', 2147483647, 'qwer');
+INSERT INTO `cashier` (`empid`, `email`, `fname`, `lname`, `mobile`, `address`, `password`, `image`) VALUES
+(3, 'phanyvic@gmail.com', 'Rexson', 'Guno', '09616198258', 'taytay', 'qwer', 'rex.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `products`
+--
+
+CREATE TABLE `products` (
+  `id` int(255) NOT NULL,
+  `pname` varchar(255) NOT NULL,
+  `pprice` varchar(255) NOT NULL,
+  `pcategory` varchar(255) NOT NULL,
+  `image` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`id`, `pname`, `pprice`, `pcategory`, `image`) VALUES
+(2, 'kape', '111', 'Coffee', 'ft2.jpg'),
+(3, 'kape', '111', 'Coffee', 'ft2.jpg'),
+(4, 'shaaa', '111', 'Seasonal/Special', 'g.gif'),
+(5, 'shaaa', '111', 'Seasonal/Special', 'g.gif');
 
 -- --------------------------------------------------------
 
@@ -71,25 +101,21 @@ INSERT INTO `cashier` (`id`, `empid`, `email`, `mobile`, `password`) VALUES
 
 CREATE TABLE `useracc` (
   `id` int(255) NOT NULL,
-  `uname` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `mobile` varchar(255) NOT NULL,
-  `password` varchar(100) NOT NULL
+  `fname` varchar(255) NOT NULL,
+  `lname` varchar(255) NOT NULL,
+  `mobile` varchar(11) NOT NULL,
+  `address` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `useracc`
 --
 
-INSERT INTO `useracc` (`id`, `uname`, `email`, `mobile`, `password`) VALUES
-(5, 'rxsn', 'phanyvic@gmail.com', '09616198258', '12345'),
-(6, 'migi', '', '', 'qwer'),
-(7, '330410', 'phanyvic@gmail.com', '09616198258', 'qwer'),
-(8, '330400', 'phanyvic@gmail.com', '09616198258', 'qwer'),
-(9, '12345', 'gggg@gmail.com', '0000000000000000', 'qwer'),
-(10, 'ericka', 'ericka@gmail.com', '09616198258', 'qwer'),
-(11, '12345', 'phanyvic@gmail.com', '09616198258', '12345'),
-(12, '330410', 'phanyvic@gmail.com', '09616198258', 'qwer');
+INSERT INTO `useracc` (`id`, `email`, `fname`, `lname`, `mobile`, `address`, `password`, `image`) VALUES
+(1, 'phanyvic@gmail.com', 'Rexson', 'Guno', '09616198258', 'taytay', 'qwer', 'glen.jpg');
 
 --
 -- Indexes for dumped tables
@@ -99,12 +125,18 @@ INSERT INTO `useracc` (`id`, `uname`, `email`, `mobile`, `password`) VALUES
 -- Indexes for table `admin`
 --
 ALTER TABLE `admin`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`empid`);
 
 --
 -- Indexes for table `cashier`
 --
 ALTER TABLE `cashier`
+  ADD PRIMARY KEY (`empid`);
+
+--
+-- Indexes for table `products`
+--
+ALTER TABLE `products`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -121,19 +153,25 @@ ALTER TABLE `useracc`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `empid` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `cashier`
 --
 ALTER TABLE `cashier`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `empid` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `products`
+--
+ALTER TABLE `products`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `useracc`
 --
 ALTER TABLE `useracc`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -172,13 +172,13 @@ nav .container a {
     padding: 5px 0;
   }
   
-  .add-to-cart .quantity-input {
+  /*.add-to-cart .quantity-input {
     color: #733311;
     border-color: #733311;
     border-radius: 5px;
     width: 40px; 
   }
-  
+  */
   .numpad {
     display: flex;
     flex-wrap: wrap;
@@ -216,6 +216,7 @@ nav .container a {
     color: white;
     border: none;
     padding: 5px 10px;
+    margin-left: 20px;
     cursor: pointer;
   }
   

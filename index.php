@@ -195,7 +195,7 @@
           </div>
         </div>
       </div>
-      <a href="" class="btn-1"><i class="bi bi-bag-heart"></i> CHECK OUT NOW!</a>
+      <a href="/PHP/userlogin.php" class="btn-1"><i class="bi bi-bag-heart"></i> CHECK OUT NOW!</a>
     </div>
   </section>
   <!-- End of Featured Product Section -->
@@ -217,7 +217,7 @@
         <div class="card-body">
           <h5 class="card-title">Original Blend</h5>
           <br>
-          <a href="#" class="btn-1">Order Now</a>
+          <a href="/PHP/userlogin.php" class="btn-1">Order Now</a>
         </div>
       </div>
     </div>
@@ -227,7 +227,7 @@
         <div class="card-body">
           <h5 class="card-title">Iced Cappucino</h5>
           <br>
-          <a href="#" class="btn-1">Order Now</a>
+          <a href="/PHP/userlogin.php" class="btn-1">Order Now</a>
         </div>
       </div>
     </div>
@@ -237,7 +237,7 @@
         <div class="card-body">
           <h5 class="card-title">Caramel Machiato</h5>
           <br>
-          <a href="#" class="btn-1">Order Now</a>
+          <a href="/PHP/userlogin.php" class="btn-1">Order Now</a>
         </div>
       </div>
     </div>
@@ -252,7 +252,7 @@
         <div class="card-body">
           <h5 class="card-title">Hot Chocolate</h5>
           <br>
-          <a href="#" class="btn-1">Order Now</a>
+          <a href="/PHP/userlogin.php" class="btn-1">Order Now</a>
         </div>
       </div>
     </div>
@@ -262,7 +262,7 @@
         <div class="card-body">
           <h5 class="card-title">Blueberry Lemonade</h5>
           <br>
-          <a href="#" class="btn-1">Order Now</a>
+          <a href="/PHP/userlogin.php" class="btn-1">Order Now</a>
         </div>
       </div>
     </div>
@@ -272,7 +272,7 @@
         <div class="card-body">
           <h5 class="card-title">Peach Juice</h5>
           <br>
-          <a href="#" class="btn-1">Order Now</a>
+          <a href="/PHP/userlogin.php" class="btn-1">Order Now</a>
         </div>
       </div>
     </div>
@@ -287,7 +287,7 @@
         <div class="card-body">
           <h5 class="card-title">Seafood Pasta</h5>
           <br>
-          <a href="#" class="btn-1">Order Now</a>
+          <a href="/PHP/userlogin.php" class="btn-1">Order Now</a>
         </div>
       </div>
     </div>
@@ -297,7 +297,7 @@
         <div class="card-body">
           <h5 class="card-title">Grilled Beef Sandwich</h5>
           <br>
-          <a href="#" class="btn-1">Order Now</a>
+          <a href="/PHP/userlogin.php" class="btn-1">Order Now</a>
         </div>
       </div>
     </div>
@@ -307,7 +307,7 @@
         <div class="card-body">
           <h5 class="card-title">Croissant Bread</h5>
           <br>
-          <a href="#" class="btn-1">Order Now</a>
+          <a href="/PHP/userlogin.php" class="btn-1">Order Now</a>
         </div>
       </div>
     </div>
@@ -322,7 +322,7 @@
         <div class="card-body">
           <h5 class="card-title">Christmas Village</h5>
           <br>
-          <a href="#" class="btn-1">Order Now</a>
+          <a href="/PHP/userlogin.php" class="btn-1">Order Now</a>
         </div>
       </div>
     </div>
@@ -332,7 +332,7 @@
         <div class="card-body">
           <h5 class="card-title">Heart Keychain</h5>
           <br>
-          <a href="#" class="btn-1">Order Now</a>
+          <a href="/PHP/userlogin.php" class="btn-1">Order Now</a>
         </div>
       </div>
     </div>
@@ -342,12 +342,12 @@
         <div class="card-body">
           <h5 class="card-title">Refrigerator Magnet</h5>
           <br>
-          <a href="#" class="btn-1">Order Now</a>
+          <a href="/PHP/userlogin.php" class="btn-1">Order Now</a>
         </div>
       </div>
     </div>
   </div>
-    <a href="#" class="btn-2" id="view-more"><i class="bi bi-search-heart-fill"></i> VIEW MORE</a>
+    <a href="/PHP/userlogin.php" class="btn-2" id="view-more"><i class="bi bi-search-heart-fill"></i> VIEW MORE</a>
 </div>
 
   </section>

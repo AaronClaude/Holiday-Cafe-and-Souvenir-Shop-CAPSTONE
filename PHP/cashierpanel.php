@@ -44,7 +44,7 @@ if (isset ($_SESSION ['email'] ) && isset ($_SESSION ['password'])){
                     <ul class="navbar-nav ms-auto">
                         
                         <li class="nav-item">
-                            <a class="nav-link" id="navLogout" href="logout.php">Sign out</a>
+                            <a class="nav-link" id="navLogout" href="Logout.php">Sign out</a>
                         </li>
                     </ul>
                 </div>
@@ -63,16 +63,16 @@ if (isset ($_SESSION ['email'] ) && isset ($_SESSION ['password'])){
         
         <div class="col-md-4" id="cart-section">
           <div class="add-to-cart">
-            <!-- Add to cart section will be dynamically updated here -->
+            <!-- Add to cart section will be updated here -->
             
           </div>
           <button class="btn btn-danger btn-lg mt-2" id="clear-cart-btn">Clear All</button>
           <div class="total mt-4" id="calculation-total">
             <h5>Total:</h5>
-            <p>Subtotal: &#8369; <span id="subtotal">0.00</span></p>
-            <p>Discount: <span id="discount">0%</span></p>
+            <p>Grand Total: &#8369; <span id="subtotal">0.00</span></p>
+            <!-- <p>Discount: <span id="discount">0%</span></p> --> 
             <p>Tendered Amount: &#8369;<input type="number" id="tendered" step="0.01"></p>
-            <p>Grand Total: &#8369; <span id="grand-total">0.00</span></p>
+            <!-- <p>Grand Total: &#8369; <span id="grand-total">0.00</span></p> -->
             <p>Change: &#8369; <span id="cashChange">0.00</span></p>
             <button class="btn btn-secondary btn-lg mt-1" id="complete-sale-btn">Cash</button>
             <button class="btn btn-primary btn-lg mt-1" id="gcash-btn" data-bs-toggle="modal" data-bs-target="#gcashModal">G-Cash</button>
@@ -80,7 +80,7 @@ if (isset ($_SESSION ['email'] ) && isset ($_SESSION ['password'])){
             
           </div>
           <div class="numpad mt-2">
-            <!-- Numpad buttons will be dynamically added here -->
+            <!-- Numpad buttons will show here -->
           </div>
         </div>
   
