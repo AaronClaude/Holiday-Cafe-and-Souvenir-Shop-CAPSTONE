@@ -4,17 +4,26 @@
     box-sizing: border-box;
 
 }
-h1{
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url(/IMG/3.jpg);
+    
+}
+
+h3 {
     background-color: #FFEDD2;
+    border-bottom: 2px solid #733311;
     text-align: center;
     height: 100px;
-    font-size: 500%;
+    color: #733311;
+    font-size: 70px;
 }
 .top-logo img{
     border-radius: 50%;
-    width: 80px;
-    margin-top: 8px;
-    margin-left: 150px;
+    width: 70px;
+    margin-top: 15px;
+    margin-left: 80px;
     position: absolute;
     z-index: 1;
 }
@@ -22,61 +31,64 @@ h1{
     border-radius: 50%;
     width: 200px;
     margin-top: 40px;
-    margin-left: 250px;
+    margin-left: 295px;
     position: absolute;
+    border: 5px solid #FFEDD2;
     z-index: 1;
 }
-.box{
+.box {
     z-index: 0;
     position: absolute;
-    margin-left: 1000px;
+    margin-left: 900px;
     margin-top: 150px;
     display: inline-block;
+    
 }
+
 .option{
     font-size: xx-large;
     margin-left:205px;
     padding-bottom: 40px;
-    
+    color: #FFEDD2;
     
 }
-#btn2{
-    background-color: antiquewhite;
-    border: solid black;
+#btn1{
+    background-color: #FFEDD2;
     border-radius: 5px;
     width: 250px;
     height: 150px;
     position: absolute;
-
+    text-align: center;
 }
-#btn1{
-    background-color: antiquewhite;
-    border: solid black;
+
+
+#btn2{
+    background-color: #FFEDD2;
     border-radius: 5px;
     width: 250px;
     height: 150px;
     position: absolute;
     margin-left:290px;
-}
-a img{
-    width: 100px;
-    padding: 10px;
-    margin-left: 30%;
-    margin-top: 20px;
-}
-.box a :hover{
-    transform: scale(10px);
+    text-align: center;
 }
 
+a img {
+    width: 100px;
+    margin-left: 5%;
+    margin-top: 20px;
+    
+}
 .MV{
-    width: 400px;
-    height: 200px;
+    width: 500px;
+    height: 300px;
     position: absolute;
     z-index: 3;
-    background-color:#F1A500;
-    border: solid 4px black;
+    background-color: #FFEDD2;
     border-radius: 5px;
     margin-top: 300px;
     margin-left: 150px;
-    font-size: x-large;
+    font-size: 23px;
+    color: #733311;
+    padding: 10px;
+    text-align: center;
 }
