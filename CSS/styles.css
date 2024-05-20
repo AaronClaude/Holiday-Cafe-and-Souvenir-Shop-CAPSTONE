@@ -121,59 +121,23 @@ nav ul li a:hover:after {
 
 
 /* Style The Dropdown Button */
-.dropbtn {
+.sign-up {
   color: #733311;
   background-color: #FFEDD2;
   border: 2px solid #733311;
+  text-decoration: none;
   padding: 10px 20px;
   border-radius: 25px;
   margin-right: -25px;
   margin-bottom: 20px;
+  transition: 0.3s ease-in-out;
 }
 
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #FFEDD2;
-  opacity: 90%;
-  filter: blur(0.10px);
-  min-width: 160px;
-  border-radius: 10px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: #733311;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {
-  background-color: #733311;
-  color: #F4F1EC;
-  border-radius: 10px;
-  transition: 0.2s ease-in;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown:hover .dropbtn {
-  background-color: #733311;
+.sign-up:hover {
   color: #FFEDD2;
-  transition: 0.5s ease
+  background-color: #733311;
+  border: 2px solid #733311;
 }
-
 
 /* Button designs for Sign up/Login option */
 .btn-1 {
@@ -539,6 +503,42 @@ section p {
 #view-more {
   padding: 12px 40px;
   margin-right: 20px;
+}
+
+/* Modal Section */
+.modal-account {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  animation: modalPopUp 0.3s ease;
+}
+
+.modal-account .container {
+  margin: 5% auto; 
+  padding: 30px;
+  border-radius: 15px;
+  border: 2px #733311 solid;
+  background-color: #FFEDD2;
+  width: 450px;
+  height: 500px; 
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+}
+
+.close-btn {
+  color: #733311;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-btn:hover, .close-btn:focus {
+color: #471f09;
+text-decoration: none;
+cursor: pointer;
 }
 
 /* Discount Section */
