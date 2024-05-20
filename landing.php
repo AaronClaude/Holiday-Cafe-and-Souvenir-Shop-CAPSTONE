@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Holiday Cafe Souvenir Shop</title>
-    <link rel="stylesheet" href="landing.css">
+    <link rel="stylesheet" href="Landing.css">
     
     
    
@@ -25,14 +25,17 @@
         <div class="option">
             Log in as
         </div>
-        <div id="box1">
-          
-            <img src="IMG/icons/admin.png">
-        </div>
-        <div id="box2">
-            
+
+        <a href="" id="btn1">
             <img src="IMG/icons/cashier.png">
-        </div>
+        </a>
+          
+          
+        <a href="" id="btn2">
+            <img src="IMG/icons/admin.png">
+        </a>
+            
+           
     </div>
    <div class="MV">
     <p>Mission:  To craft unforgettable festive experiences for families and friends, 
